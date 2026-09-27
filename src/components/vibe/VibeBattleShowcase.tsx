@@ -186,7 +186,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
   return (
     <div className={`space-y-8 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       {/* Hero Banner */}
-      <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl border border-amber-500/30 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl">
         <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative z-10">
           <div className="space-y-2 max-w-2xl">
@@ -217,7 +217,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
       {isSubmitOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in">
           <div className="bg-slate-900 border border-amber-500/40 rounded-2xl max-w-lg w-full p-6 text-slate-100 shadow-2xl space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center gap-2">
                 <Crown className="w-5 h-5 text-amber-400" />
                 <h3 className="font-bold text-base text-white">명예의 전당 작품 출품하기</h3>
@@ -289,7 +289,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                 />
               </div>
 
-              <div className="flex justify-end gap-2 pt-2 border-t border-slate-800">
+              <div className="flex justify-end gap-2 pt-2 border-t border-white/10">
                 <button
                   type="button"
                   onClick={() => setIsSubmitOpen(false)}
@@ -319,14 +319,14 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
           return (
             <div
               key={item.id}
-              className={`rounded-2xl border p-5 sm:p-6 transition-all duration-300 bg-slate-900/80 flex flex-col justify-between relative overflow-hidden group hover:border-amber-400/50 hover:shadow-xl ${
+              className={`rounded-3xl border p-5 sm:p-6 transition-all duration-300 bg-slate-900/80 flex flex-col justify-between relative overflow-hidden group hover:border-amber-400/50 hover:shadow-xl ${
                 item.rank === 1
                   ? 'border-amber-400/60 bg-gradient-to-br from-amber-950/30 to-slate-900 shadow-amber-500/10 shadow-lg'
                   : item.rank === 2
                   ? 'border-slate-500/40 bg-gradient-to-br from-slate-800/30 to-slate-900'
                   : item.rank === 3
                   ? 'border-amber-700/40 bg-gradient-to-br from-amber-950/20 to-slate-900'
-                  : 'border-slate-800'
+                  : 'border-white/10'
               }`}
             >
               <div>
@@ -379,7 +379,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-slate-300 leading-relaxed bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 mb-3">
+                <p className="text-xs text-slate-300 leading-relaxed bg-slate-950/60 p-3 rounded-xl border border-white/10 mb-3">
                   {item.description}
                 </p>
 
@@ -403,7 +403,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
               </div>
 
               {/* Footer */}
-              <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
                 <span className="font-mono text-[10px] text-slate-500">{item.techStack}</span>
                 <span className="text-amber-400 font-semibold text-[11px]">
                   {item.rank === 1 ? '🥇 주간 명예의 전당 1위' : '실전 작품 인증'}

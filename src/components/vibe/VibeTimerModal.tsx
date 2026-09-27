@@ -104,7 +104,7 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
         </div>
 
         {/* Mission Input Banner */}
-        <div className="bg-slate-950 p-3 rounded-2xl border border-slate-800 space-y-1 text-left">
+        <div className="bg-slate-950 p-3 rounded-3xl border border-white/10 space-y-1 text-left">
           <label className="text-[11px] font-bold text-slate-400 font-mono flex items-center gap-1">
             <Flame className="w-3 h-3 text-rose-400" />
             <span>현재 실습 미션 (칠판에 크게 노출됨):</span>
@@ -113,7 +113,7 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
             type="text"
             value={missionText}
             onChange={(e) => setMissionText(e.target.value)}
-            className="w-full bg-slate-900 text-white font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-slate-800 focus:outline-none focus:border-rose-400"
+            className="w-full bg-slate-900 text-white font-bold text-xs sm:text-sm px-3 py-2 rounded-xl border border-white/10 focus:outline-none focus:border-rose-400"
           />
         </div>
 
@@ -121,7 +121,7 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
         <div className={`py-6 px-4 rounded-3xl border-2 transition-all ${
           secondsLeft <= 30 && isActive
             ? 'bg-rose-950/40 border-rose-500 shadow-[0_0_50px_rgba(244,63,94,0.3)] animate-pulse'
-            : 'bg-slate-950 border-slate-800'
+            : 'bg-slate-950 border-white/10'
         }`}>
           <div className="font-mono text-6xl sm:text-7xl font-black text-white tracking-widest drop-shadow-md">
             {timeFormatted}
@@ -135,19 +135,19 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
         <div className="flex justify-center gap-2">
           <button
             onClick={() => setTimerPreset(3)}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-mono text-xs font-bold transition-colors"
+            className="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-slate-300 font-mono text-xs font-bold transition-colors"
           >
             3분 (초간단)
           </button>
           <button
             onClick={() => setTimerPreset(5)}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-mono text-xs font-bold transition-colors"
+            className="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-slate-300 font-mono text-xs font-bold transition-colors"
           >
             5분 (표준)
           </button>
           <button
             onClick={() => setTimerPreset(10)}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-mono text-xs font-bold transition-colors"
+            className="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-slate-300 font-mono text-xs font-bold transition-colors"
           >
             10분 (심화)
           </button>
@@ -169,7 +169,7 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
 
           <button
             onClick={resetTimer}
-            className="px-4 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-bold text-sm flex items-center gap-1.5 transition-colors"
+            className="px-4 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-white/10 text-slate-300 font-bold text-sm flex items-center gap-1.5 transition-colors"
           >
             <RotateCcw className="w-4 h-4" />
             <span>리셋</span>

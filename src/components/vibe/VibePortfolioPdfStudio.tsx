@@ -92,7 +92,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
   return (
     <div className={`space-y-8 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       {/* Intro Banner (Print: Hidden) */}
-      <div className="rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl print:hidden">
+      <div className="rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl print:hidden">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
@@ -120,8 +120,8 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
       </div>
 
       {/* Editor Controls (Print: Hidden) */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6 space-y-4 print:hidden text-xs">
-        <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div className="prism-card border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 print:hidden text-xs">
+        <div className="flex items-center justify-between border-b border-white/10 pb-3">
           <h3 className="font-bold text-white text-sm flex items-center gap-2">
             <Briefcase className="w-4 h-4 text-emerald-400" />
             <span>포트폴리오 내용 실시간 편집</span>

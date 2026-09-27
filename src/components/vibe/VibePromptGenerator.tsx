@@ -114,7 +114,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-2xl border border-indigo-900/50 bg-gradient-to-br from-indigo-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
+      <div className="rounded-3xl border border-white/10 prism-card p-6 sm:p-8 shadow-2xl relative overflow-hidden group">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-bold">
@@ -136,25 +136,25 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => handleQuickPresetFill('calculator')}
-                className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-indigo-900/60 border border-slate-700 hover:border-indigo-500 text-xs text-slate-200 transition-all"
+                className="px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-indigo-500/20 border border-white/10 hover:border-indigo-400/50 text-xs text-slate-200 hover:text-white transition-all shadow-sm"
               >
                 💰 급여계산기
               </button>
               <button
                 onClick={() => handleQuickPresetFill('timer')}
-                className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-cyan-900/60 border border-slate-700 hover:border-cyan-500 text-xs text-slate-200 transition-all"
+                className="px-2.5 py-1 rounded-lg bg-white/[0.06] hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-400/50 hover:text-white text-xs text-slate-200 transition-all"
               >
                 ⏱️ 수업 타이머
               </button>
               <button
                 onClick={() => handleQuickPresetFill('excel')}
-                className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-emerald-900/60 border border-slate-700 hover:border-emerald-500 text-xs text-slate-200 transition-all"
+                className="px-2.5 py-1 rounded-lg bg-white/[0.06] hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-400/50 hover:text-white text-xs text-slate-200 transition-all"
               >
                 📊 엑셀 대시보드
               </button>
               <button
                 onClick={() => handleQuickPresetFill('todo')}
-                className="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-purple-900/60 border border-slate-700 hover:border-purple-500 text-xs text-slate-200 transition-all"
+                className="px-2.5 py-1 rounded-lg bg-white/[0.06] hover:bg-purple-500/20 border border-white/10 hover:border-purple-400/50 hover:text-white text-xs text-slate-200 transition-all"
               >
                 📝 감성 플래너
               </button>
@@ -213,7 +213,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 placeholder="예: 2026 직장인 연봉/실수령액 계산기"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -228,7 +228,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={targetUser}
                 onChange={(e) => setTargetUser(e.target.value)}
                 placeholder="예: 연봉 협상을 앞둔 직장인"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -243,21 +243,21 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={feature1}
                 onChange={(e) => setFeature1(e.target.value)}
                 placeholder="기능 1"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
               <input
                 type="text"
                 value={feature2}
                 onChange={(e) => setFeature2(e.target.value)}
                 placeholder="기능 2"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
               <input
                 type="text"
                 value={feature3}
                 onChange={(e) => setFeature3(e.target.value)}
                 placeholder="기능 3"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -272,7 +272,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={techStyle}
                 onChange={(e) => setTechStyle(e.target.value)}
                 placeholder="예: 토스 스타일의 다크 슬레이트 & 에메랄드"
-                className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -298,7 +298,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                   className={`px-3.5 py-1.5 rounded-xl font-bold text-xs flex items-center gap-1.5 transition-all ${
                     copied
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md shadow-indigo-600/20'
+                      : 'aurora-button text-white font-bold shadow-md shadow-indigo-600/20'
                   }`}
                 >
                   {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}

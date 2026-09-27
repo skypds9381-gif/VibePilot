@@ -125,7 +125,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
   return (
     <div className={`space-y-8 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       {/* Hero Banner */}
-      <div className="relative overflow-hidden rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative z-10">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-bold">
@@ -162,7 +162,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
             className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
               selectedCat === c.id
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-800'
+                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-white/10'
             }`}
           >
             {c.label}
@@ -178,7 +178,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
           return (
             <div
               key={item.id}
-              className="rounded-2xl border border-slate-800 bg-slate-900/90 hover:border-indigo-500/40 p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group shadow-lg space-y-4"
+              className="rounded-3xl border border-white/10 bg-slate-900/90 hover:border-indigo-500/40 p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group shadow-lg space-y-4"
             >
               <div className="space-y-3">
                 {/* Header */}
@@ -194,7 +194,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
                 </div>
 
                 {/* User's natural thought */}
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800/80">
+                <div className="p-3 rounded-xl bg-[#090b14]/90 border border-white/10/80">
                   <p className="text-[11px] font-bold text-slate-400 flex items-center gap-1 mb-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-rose-400 inline-block" />
                     내가 머릿속으로 하는 생각:
@@ -236,7 +236,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
               </div>
 
               {/* Bottom Quick Action */}
-              <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs">
                 <span className="text-[10px] text-slate-500">Claude · Cursor · ChatGPT 100% 호환</span>
                 <button
                   onClick={() => handleCopy(item.id, item.vibePrompt)}

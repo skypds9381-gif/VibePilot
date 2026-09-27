@@ -38,9 +38,15 @@ export const VibeApp: React.FC<VibeAppProps> = ({ onSwitchToCinema }) => {
   };
 
   return (
-    <div className={`min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans transition-all ${
+    <div className={`min-h-screen aurora-bg text-slate-100 flex flex-col font-sans transition-all relative overflow-x-hidden selection:bg-indigo-500 selection:text-white ${
       isProjectorMode ? 'contrast-125' : ''
     }`}>
+      {/* Aurora Ambient Background Orbs */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute -top-40 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-pink-600/10 rounded-full blur-[140px]" />
+        <div className="absolute -bottom-20 left-10 w-[550px] h-[550px] bg-cyan-600/10 rounded-full blur-[130px]" />
+      </div>
       {/* Vibe Studio Navigation Bar (Refactored Zero-Scroll Cluster) */}
       <VibeHeader
         activeTab={activeTab}
@@ -54,7 +60,7 @@ export const VibeApp: React.FC<VibeAppProps> = ({ onSwitchToCinema }) => {
       />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 relative z-10">
         {activeTab === 'generator' && (
           <VibePromptGenerator
             onSendToPlayground={handleSendToPlayground}
@@ -137,7 +143,7 @@ export const VibeApp: React.FC<VibeAppProps> = ({ onSwitchToCinema }) => {
       </main>
 
       {/* Footer & Mode Switcher */}
-      <footer className="w-full bg-slate-950 border-t border-slate-900 py-6 px-4 print:hidden">
+      <footer className="w-full bg-[#0a0c16]/80 backdrop-blur-xl border-t border-white/5 py-6 px-4 print:hidden relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <span className="font-bold text-slate-400">VibePilot</span>

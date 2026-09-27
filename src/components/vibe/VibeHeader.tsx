@@ -105,7 +105,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-slate-950/95 backdrop-blur-md border-b border-slate-800" ref={dropdownRef}>
+    <header className="sticky top-0 z-40 w-full bg-[#070913]/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20" ref={dropdownRef}>
       <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
         
         {/* Left: Brand Logo */}
@@ -121,22 +121,22 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               <span className="font-extrabold text-base sm:text-lg tracking-tight text-white font-sans">
                 VibePilot
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-950 border border-indigo-500/40 text-indigo-300 font-bold hidden md:inline-block">
-                Diamond Suite
+              <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-200 font-bold hidden md:inline-block shadow-[0_0_12px_rgba(168,85,247,0.2)]">
+                💎 Diamond Aurora
               </span>
             </div>
           </div>
         </div>
 
         {/* Center: Desktop Navigation Menu (Zero Scrollbar on Desktop, hidden on Mobile) */}
-        <nav className="hidden lg:flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-800 text-xs gap-1">
+        <nav className="hidden lg:flex items-center bg-white/[0.04] backdrop-blur-md p-1 rounded-xl border border-white/10 text-xs gap-1 shadow-inner">
           
           {/* 1. 프롬프트 마스터 */}
           <button
             onClick={() => onSelectTab('generator')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'generator'
-                ? 'bg-indigo-600 text-white shadow-md'
+                ? 'aurora-button text-white shadow-md font-bold'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -149,7 +149,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             onClick={() => onSelectTab('playground')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'playground'
-                ? 'bg-indigo-600 text-white shadow-md'
+                ? 'aurora-button text-white shadow-md font-bold'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -166,7 +166,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                 isCreativeActive
-                  ? 'bg-indigo-600 text-white shadow-md'
+                  ? 'aurora-button text-white shadow-md font-bold'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
               }`}
             >
@@ -176,7 +176,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             </button>
 
             {isCreativeDropdownOpen && (
-              <div className="absolute top-full left-0 mt-1.5 w-56 bg-slate-900 border border-slate-700/80 rounded-xl shadow-2xl p-1.5 z-50 animate-in fade-in slide-in-from-top-1">
+              <div className="absolute top-full left-0 mt-1.5 w-56 bg-[#0f1123]/95 backdrop-blur-2xl border border-purple-500/30 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-1 shadow-[0_15px_50px_rgba(0,0,0,0.7)]">
                 <button
                   onClick={() => {
                     onSelectTab('multimedia');
@@ -217,7 +217,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             onClick={() => onSelectTab('deploy')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'deploy'
-                ? 'bg-indigo-600 text-white shadow-md'
+                ? 'aurora-button text-white shadow-md font-bold'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -234,7 +234,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                 isWorkflowActive
-                  ? 'bg-indigo-600 text-white shadow-md'
+                  ? 'aurora-button text-white shadow-md font-bold'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
               }`}
             >
@@ -244,7 +244,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             </button>
 
             {isWorkflowDropdownOpen && (
-              <div className="absolute top-full right-0 mt-1.5 w-56 bg-slate-900 border border-slate-700/80 rounded-xl shadow-2xl p-1.5 z-50 animate-in fade-in slide-in-from-top-1">
+              <div className="absolute top-full right-0 mt-1.5 w-56 bg-[#0f1123]/95 backdrop-blur-2xl border border-purple-500/30 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-1 shadow-[0_15px_50px_rgba(0,0,0,0.7)]">
                 <button
                   onClick={() => {
                     onSelectTab('office');
@@ -390,7 +390,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* 실습 라이브 타이머 */}
           <button
             onClick={onOpenTimerModal}
-            className="p-1.5 sm:p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-rose-400 hover:text-rose-300 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-1.5 sm:p-2 rounded-xl bg-white/[0.05] hover:bg-rose-500/20 text-rose-300 hover:text-rose-200 border border-rose-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="실습 라이브 타이머"
           >
             <Timer className="w-4 h-4" />
@@ -400,7 +400,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* 폰 QR */}
           <button
             onClick={onOpenQrModal}
-            className="p-1.5 sm:p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-400 hover:text-cyan-300 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-1.5 sm:p-2 rounded-xl bg-white/[0.05] hover:bg-cyan-500/20 text-cyan-300 hover:text-cyan-200 border border-cyan-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="학생 스마트폰 접속용 칠판 QR 생성"
           >
             <QrCode className="w-4 h-4" />
@@ -410,7 +410,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* A4 치트시트 */}
           <button
             onClick={onOpenCheatSheetModal}
-            className="p-1.5 sm:p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-400 hover:text-amber-300 border border-slate-800 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-1.5 sm:p-2 rounded-xl bg-white/[0.05] hover:bg-amber-500/20 text-amber-300 hover:text-amber-200 border border-amber-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="A4 1장 학생 배포용 치트시트 인쇄"
           >
             <Printer className="w-4 h-4" />
