@@ -62,7 +62,7 @@ export const VibeQrModal: React.FC<VibeQrModalProps> = ({
         </div>
 
         {/* QR Code Container */}
-        <div className="flex justify-center p-4 bg-[#121214] rounded-[24px] border-2 border-cyan-500/30 shadow-inner">
+        <div className="flex justify-center p-4 bg-[#0a0c14] rounded-[24px] border-2 border-cyan-500/30 shadow-inner">
           <img
             src={qrApiUrl}
             alt="Vibe App QR Code"
@@ -72,7 +72,7 @@ export const VibeQrModal: React.FC<VibeQrModalProps> = ({
 
         {/* URL Input & Copy */}
         <div className="space-y-2">
-          <div className="flex items-center gap-2 bg-[#121214] p-2 rounded-xl border border-white/[0.12]">
+          <div className="flex items-center gap-2 bg-[#0a0c14] p-2 rounded-xl border border-white/[0.12]">
             <input
               type="text"
               value={url}

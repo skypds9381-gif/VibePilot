@@ -104,7 +104,7 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
         </div>
 
         {/* Mission Input Banner */}
-        <div className="bg-[#121214] p-3 rounded-[24px] border border-white/[0.12] space-y-1 text-left">
+        <div className="bg-[#0a0c14] p-3 rounded-[24px] border border-white/[0.12] space-y-1 text-left">
           <label className="text-[11px] font-bold text-slate-400 font-mono flex items-center gap-1">
             <Flame className="w-3 h-3 text-rose-400" />
             <span>현재 실습 미션 (칠판에 크게 노출됨):</span>
@@ -121,7 +121,7 @@ export const VibeTimerModal: React.FC<VibeTimerModalProps> = ({
         <div className={`py-6 px-4 rounded-[24px] border-2 transition-all ${
           secondsLeft <= 30 && isActive
             ? 'bg-rose-950/40 border-rose-500 shadow-[0_0_50px_rgba(244,63,94,0.3)] animate-pulse'
-            : 'bg-[#121214] border-white/[0.12]'
+            : 'bg-[#0a0c14] border-white/[0.12]'
         }`}>
           <div className="font-mono text-6xl sm:text-7xl font-black text-white tracking-widest drop-shadow-md">
             {timeFormatted}

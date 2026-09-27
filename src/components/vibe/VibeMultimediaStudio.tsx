@@ -159,7 +159,7 @@ export const VibeMultimediaStudio: React.FC<VibeMultimediaStudioProps> = ({
           {proAiTools.map((tool, idx) => (
             <div 
               key={idx}
-              className="apple-glass-card border-white/[0.12] hover:border-slate-700 rounded-[20px] p-5 flex flex-col justify-between space-y-4 shadow-xl relative group transition-all"
+              className="linear-card rounded-2xl border-white/[0.12] hover:border-slate-700 rounded-[20px] p-5 flex flex-col justify-between space-y-4 shadow-xl relative group transition-all"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -178,7 +178,7 @@ export const VibeMultimediaStudio: React.FC<VibeMultimediaStudioProps> = ({
                   </p>
                 </div>
 
-                <div className="p-3 bg-[#121214]/80 rounded-xl border border-white/[0.12] text-[11px] text-slate-400 leading-normal">
+                <div className="p-3 bg-[#0a0c14]/80 rounded-xl border border-white/[0.12] text-[11px] text-slate-400 leading-normal">
                   <span className="text-violet-400 font-bold">💡 강의 시연 팁: </span>
                   {tool.curriculumHook}
                 </div>
@@ -215,7 +215,7 @@ export const VibeMultimediaStudio: React.FC<VibeMultimediaStudioProps> = ({
         {filteredRecipes.map((recipe) => (
           <div
             key={recipe.id}
-            className="apple-glass-card border-white/[0.12] rounded-[24px] p-6 sm:p-7 shadow-xl space-y-6 hover:border-slate-700 transition-colors"
+            className="linear-card rounded-2xl border-white/[0.12] rounded-[24px] p-6 sm:p-7 shadow-xl space-y-6 hover:border-slate-700 transition-colors"
           >
             {/* Header info */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/[0.12] pb-4">
@@ -243,7 +243,7 @@ export const VibeMultimediaStudio: React.FC<VibeMultimediaStudioProps> = ({
               <div className="flex items-center gap-2 shrink-0">
                 <button
                   onClick={() => onLoadCodeToPlayground(recipe.sampleCode)}
-                  className="px-4 py-2.5 apple-btn-primary text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/25 flex items-center gap-1.5 transition-all"
+                  className="px-4 py-2.5 linear-btn-primary rounded-xl font-bold text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/25 flex items-center gap-1.5 transition-all"
                 >
                   <Play className="w-3.5 h-3.5 fill-current" />
                   <span>샌드박스에서 즉시 체험 🚀</span>
@@ -296,7 +296,7 @@ export const VibeMultimediaStudio: React.FC<VibeMultimediaStudioProps> = ({
               </div>
 
               <div className="relative">
-                <pre className="bg-[#121214] p-4 rounded-[24px] border border-white/[0.12] text-xs font-mono text-slate-300 whitespace-pre-wrap overflow-x-auto max-h-48 leading-relaxed">
+                <pre className="bg-[#0a0c14] p-4 rounded-[24px] border border-white/[0.12] text-xs font-mono text-slate-300 whitespace-pre-wrap overflow-x-auto max-h-48 leading-relaxed">
                   {recipe.promptToAi}
                 </pre>
                 <button
@@ -322,7 +322,7 @@ export const VibeMultimediaStudio: React.FC<VibeMultimediaStudioProps> = ({
             <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px]">
               <span className="font-bold text-slate-400">핵심 파이프라인:</span>
               {recipe.keyActionSteps.map((step, idx) => (
-                <span key={idx} className="px-2.5 py-1 rounded-lg bg-[#161618]/80 border border-white/[0.12] text-slate-300">
+                <span key={idx} className="px-2.5 py-1 rounded-lg bg-[#07080f]/90 border border-white/[0.12] text-slate-300">
                   {idx + 1}. {step}
                 </span>
               ))}

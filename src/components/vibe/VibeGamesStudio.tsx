@@ -94,7 +94,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
       </div>
 
       {/* Selected Game Details */}
-      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
           <div className="space-y-1">
@@ -129,7 +129,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
         </div>
 
         {/* Teaching Guide */}
-        <div className="bg-[#121214]/80 rounded-xl p-4 border border-pink-500/20 text-xs space-y-1">
+        <div className="bg-[#0a0c14]/80 rounded-xl p-4 border border-pink-500/20 text-xs space-y-1">
           <p className="font-bold text-pink-300 flex items-center gap-1.5">
             <Flame className="w-4 h-4 text-pink-400" />
             <span>수업 활용 과제 아이디어:</span>
@@ -148,7 +148,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
               AI에게 던져줄 게임 생성 원본 프롬프트
             </span>
           </div>
-          <div className="bg-[#121214] p-4 rounded-xl border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
+          <div className="bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
             {selectedGame.prompt}
           </div>
         </div>

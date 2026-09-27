@@ -100,7 +100,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
         
         {/* Left: Input Error Log (5 cols) */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-5 space-y-4 shadow-lg">
+          <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-5 space-y-4 shadow-lg">
             <div className="flex items-center justify-between border-b border-white/[0.12] pb-3">
               <h3 className="font-bold text-white text-sm flex items-center gap-2">
                 <Bug className="w-4 h-4 text-rose-400" />
@@ -118,7 +118,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
                 onChange={(e) => setErrorLog(e.target.value)}
                 rows={7}
                 placeholder="예: IndentationError: unexpected indent..."
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl p-3.5 text-xs text-rose-200 font-mono focus:outline-none focus:border-rose-500 leading-relaxed resize-none"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl p-3.5 text-xs text-rose-200 font-mono focus:outline-none focus:border-rose-500 leading-relaxed resize-none"
               />
             </div>
 
@@ -131,11 +131,11 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
                 value={errorContext}
                 onChange={(e) => setErrorContext(e.target.value)}
                 placeholder="예: 버튼을 눌렀는데 화면이 반응이 없고 콘솔에 뜸"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-rose-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-rose-500"
               />
             </div>
 
-            <div className="bg-[#121214]/60 rounded-xl p-3 border border-white/[0.12] text-xs text-slate-400 space-y-1">
+            <div className="bg-[#0a0c14]/60 rounded-xl p-3 border border-white/[0.12] text-xs text-slate-400 space-y-1">
               <p className="font-semibold text-slate-300 flex items-center gap-1">
                 <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
                 <span>강사용 설명 꿀팁:</span>
@@ -151,7 +151,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
 
         {/* Right: AI Fix Prompt (7 cols) */}
         <div className="lg:col-span-7 flex flex-col space-y-4">
-          <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-5 flex-1 flex flex-col shadow-lg space-y-3">
+          <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-5 flex-1 flex flex-col shadow-lg space-y-3">
             
             <div className="flex items-center justify-between border-b border-white/[0.12] pb-3">
               <div className="flex items-center gap-2">
@@ -174,7 +174,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
               </button>
             </div>
 
-            <div className="flex-1 min-h-[300px] bg-[#121214] rounded-xl border border-white/[0.12] p-4 font-mono text-xs text-slate-200 overflow-y-auto whitespace-pre-wrap leading-relaxed">
+            <div className="flex-1 min-h-[300px] bg-[#0a0c14] rounded-xl border border-white/[0.12] p-4 font-mono text-xs text-slate-200 overflow-y-auto whitespace-pre-wrap leading-relaxed">
               {fixPrompt}
             </div>
 

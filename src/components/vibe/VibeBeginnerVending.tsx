@@ -194,7 +194,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
                 </div>
 
                 {/* User's natural thought */}
-                <div className="p-3 rounded-xl bg-[#161618]/80 border border-white/[0.12]/80">
+                <div className="p-3 rounded-xl bg-[#07080f]/90 border border-white/[0.12]/80">
                   <p className="text-[11px] font-bold text-slate-400 flex items-center gap-1 mb-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-rose-400 inline-block" />
                     내가 머릿속으로 하는 생각:
@@ -216,7 +216,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
                       className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
                         isCopied
                           ? 'bg-emerald-600 text-white'
-                          : 'apple-btn-primary text-white shadow-sm'
+                          : 'linear-btn-primary rounded-xl font-bold text-white shadow-sm'
                       }`}
                     >
                       {isCopied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}

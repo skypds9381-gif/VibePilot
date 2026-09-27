@@ -120,7 +120,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
       </div>
 
       {/* Editor Controls (Print: Hidden) */}
-      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-5 sm:p-6 space-y-4 print:hidden text-xs">
+      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-5 sm:p-6 space-y-4 print:hidden text-xs">
         <div className="flex items-center justify-between border-b border-white/[0.12] pb-3">
           <h3 className="font-bold text-white text-sm flex items-center gap-2">
             <Briefcase className="w-4 h-4 text-emerald-400" />
@@ -136,7 +136,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
               type="text"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white"
+              className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white"
             />
           </div>
           <div>
@@ -145,7 +145,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
               type="text"
               value={targetRole}
               onChange={(e) => setTargetRole(e.target.value)}
-              className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white"
+              className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white"
             />
           </div>
           <div>
@@ -154,7 +154,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white"
+              className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white"
             />
           </div>
           <div>
@@ -163,7 +163,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
               type="text"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white"
+              className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white"
             />
           </div>
         </div>
@@ -174,7 +174,7 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
             type="text"
             value={oneLineSummary}
             onChange={(e) => setOneLineSummary(e.target.value)}
-            className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white"
+            className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white"
           />
         </div>
 
@@ -184,13 +184,13 @@ export const VibePortfolioPdfStudio: React.FC<{ isProjectorMode?: boolean }> = (
             type="text"
             value={skills}
             onChange={(e) => setSkills(e.target.value)}
-            className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white font-mono"
+            className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white font-mono"
           />
         </div>
       </div>
 
       {/* A4 Paper Document Preview (Print Area) */}
-      <div className="bg-[#121214] p-2 sm:p-6 rounded-[20px] flex justify-center">
+      <div className="bg-[#0a0c14] p-2 sm:p-6 rounded-[20px] flex justify-center">
         <div 
           id="portfolio-document"
           className="bg-white text-slate-900 w-full max-w-4xl p-8 sm:p-12 rounded-xl shadow-2xl space-y-8 font-sans border border-slate-200"

@@ -87,7 +87,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
       </div>
 
       {/* Step by Step Visual Card */}
-      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
         
         <div className="border-b border-white/[0.12] pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
@@ -114,7 +114,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
         </div>
 
         {/* Instructor Script Box */}
-        <div className="bg-[#121214]/80 border border-emerald-500/20 rounded-xl p-4 text-xs space-y-1">
+        <div className="bg-[#0a0c14]/80 border border-emerald-500/20 rounded-xl p-4 text-xs space-y-1">
           <p className="font-bold text-emerald-300 flex items-center gap-1.5">
             <Share2 className="w-3.5 h-3.5 text-emerald-400" />
             <span>수업 현장 강사님 멘트 가이드:</span>
@@ -127,7 +127,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
         {/* Step Flow List */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {selectedGuide.steps.map((st) => (
-            <div key={st.stepNum} className="p-4 rounded-xl bg-[#161618]/80 border border-white/[0.12] space-y-2">
+            <div key={st.stepNum} className="p-4 rounded-xl bg-[#07080f]/90 border border-white/[0.12] space-y-2">
               <div className="flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold flex items-center justify-center font-mono">
                   {st.stepNum}

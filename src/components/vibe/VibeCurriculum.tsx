@@ -99,7 +99,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
       </div>
 
       {/* Selected Challenge Detail Card */}
-      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
         
         {/* Header of Detail */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
@@ -132,7 +132,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
         </div>
 
         {/* Instructor Note Card */}
-        <div className="bg-[#121214]/80 rounded-xl p-4 border border-purple-500/20 flex items-start gap-3 text-xs">
+        <div className="bg-[#0a0c14]/80 rounded-xl p-4 border border-purple-500/20 flex items-start gap-3 text-xs">
           <Lightbulb className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <p className="font-bold text-white">🎓 강사용 지도 가이드 (Teaching Point):</p>
@@ -144,7 +144,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
 
         {/* Requirements Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-          <div className="space-y-2 bg-[#121214] p-4 rounded-xl border border-white/[0.12]">
+          <div className="space-y-2 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12]">
             <p className="font-bold text-white flex items-center gap-1.5">
               <Layers className="w-3.5 h-3.5 text-indigo-400" />
               <span>핵심 구현 스펙</span>
@@ -156,7 +156,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
             </ul>
           </div>
 
-          <div className="space-y-2 bg-[#121214] p-4 rounded-xl border border-white/[0.12]">
+          <div className="space-y-2 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12]">
             <p className="font-bold text-white flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-pink-400" />
               <span>디자인 & 기술 조건</span>
@@ -175,7 +175,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
             <span className="text-xs font-bold text-slate-300">수강생에게 제공할 AI 프롬프트 전문</span>
             <span className="text-[11px] text-slate-500 font-mono">One-Shot Prompt</span>
           </div>
-          <div className="bg-[#121214] p-4 rounded-xl border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
+          <div className="bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
             {selectedChallenge.quickPrompt}
           </div>
         </div>

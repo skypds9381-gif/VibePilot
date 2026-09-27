@@ -105,38 +105,38 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#000000]/70 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all" ref={dropdownRef}>
+    <header className="sticky top-0 z-40 w-full bg-[#030407]/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_35px_rgba(0,0,0,0.8)] transition-all" ref={dropdownRef}>
       <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
         
-        {/* Left: Apple Style Brand Logo */}
+        {/* Left: Linear / Raycast Tech Logo */}
         <div 
           className="flex items-center gap-2.5 shrink-0 cursor-pointer group select-none" 
           onClick={() => handleMobileNavClick('generator')}
         >
-          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-[14px] bg-[#1c1c1e] border border-white/20 flex items-center justify-center text-white shadow-md shadow-black/40 group-hover:scale-105 active:scale-95 transition-all">
-            <Zap className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#2997FF] fill-[#2997FF]" />
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-indigo-950 via-slate-900 to-black border border-indigo-500/40 flex items-center justify-center text-white shadow-[0_0_15px_rgba(99,102,241,0.3)] group-hover:border-cyan-400 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all">
+            <Zap className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-cyan-400 fill-cyan-400/80 animate-pulse" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-base sm:text-lg tracking-tight text-white font-sans flex items-center gap-1.5">
-                VibePilot
+              <span className="font-mono font-bold text-base sm:text-lg tracking-tight text-white flex items-center gap-1.5">
+                VibePilot<span className="text-cyan-400">.</span>sh
               </span>
-              <span className="text-[10px] tracking-tight font-medium px-2 py-0.5 rounded-full bg-white/[0.08] border border-white/[0.12] text-[#86868B] group-hover:text-white transition-colors hidden md:inline-block">
-                🍎 Cupertino Pro
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-cyan-950/60 border border-cyan-500/40 text-cyan-300 font-semibold shadow-[0_0_10px_rgba(0,240,255,0.2)] hidden md:inline-block">
+                ⚡ HYPER-TECH
               </span>
             </div>
           </div>
         </div>
 
         {/* Center: Desktop Navigation Menu (Zero Scrollbar on Desktop, hidden on Mobile) */}
-        <nav className="hidden lg:flex items-center apple-segmented-bar text-xs gap-1">
+        <nav className="hidden lg:flex items-center bg-[#0a0b12]/90 backdrop-blur-xl p-1 rounded-xl border border-white/[0.08] text-xs gap-1 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]">
           
           {/* 1. 프롬프트 마스터 */}
           <button
             onClick={() => onSelectTab('generator')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'generator'
-                ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
+                ? 'bg-gradient-to-r from-indigo-600/90 to-purple-600/90 border border-cyan-400/50 text-white font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] rounded-lg'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -149,7 +149,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             onClick={() => onSelectTab('playground')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'playground'
-                ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
+                ? 'bg-gradient-to-r from-indigo-600/90 to-purple-600/90 border border-cyan-400/50 text-white font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] rounded-lg'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -166,7 +166,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                 isCreativeActive
-                  ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
+                  ? 'bg-gradient-to-r from-indigo-600/90 to-purple-600/90 border border-cyan-400/50 text-white font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] rounded-lg'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
               }`}
             >
@@ -217,7 +217,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             onClick={() => onSelectTab('deploy')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'deploy'
-                ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
+                ? 'bg-gradient-to-r from-indigo-600/90 to-purple-600/90 border border-cyan-400/50 text-white font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] rounded-lg'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -234,7 +234,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                 isWorkflowActive
-                  ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
+                  ? 'bg-gradient-to-r from-indigo-600/90 to-purple-600/90 border border-cyan-400/50 text-white font-bold shadow-[0_0_15px_rgba(0,240,255,0.3)] rounded-lg'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
               }`}
             >
@@ -390,7 +390,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* 실습 라이브 타이머 */}
           <button
             onClick={onOpenTimerModal}
-            className="p-2 rounded-[14px] bg-[#1c1c1e] hover:bg-[#2c2c2e] active:scale-95 text-[#FF453A] border border-white/[0.12] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-2 rounded-xl bg-slate-900/90 hover:bg-rose-950/40 text-rose-400 hover:text-rose-300 border border-rose-500/40 hover:border-rose-400 shadow-[0_0_10px_rgba(244,63,94,0.15)] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="실습 라이브 타이머"
           >
             <Timer className="w-4 h-4" />
@@ -400,7 +400,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* 폰 QR */}
           <button
             onClick={onOpenQrModal}
-            className="p-2 rounded-[14px] bg-[#1c1c1e] hover:bg-[#2c2c2e] active:scale-95 text-[#64D2FF] border border-white/[0.12] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-2 rounded-xl bg-slate-900/90 hover:bg-cyan-950/40 text-cyan-400 hover:text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.15)] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="학생 스마트폰 접속용 칠판 QR 생성"
           >
             <QrCode className="w-4 h-4" />
@@ -410,7 +410,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* A4 치트시트 */}
           <button
             onClick={onOpenCheatSheetModal}
-            className="p-2 rounded-[14px] bg-[#1c1c1e] hover:bg-[#2c2c2e] active:scale-95 text-[#FFD60A] border border-white/[0.12] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-2 rounded-xl bg-slate-900/90 hover:bg-amber-950/40 text-amber-400 hover:text-amber-300 border border-amber-500/40 hover:border-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.15)] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="A4 1장 학생 배포용 치트시트 인쇄"
           >
             <Printer className="w-4 h-4" />

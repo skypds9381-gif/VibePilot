@@ -114,7 +114,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-[24px] border border-white/[0.12] apple-glass-card p-6 sm:p-8 shadow-2xl relative overflow-hidden group">
+      <div className="rounded-[24px] border border-white/[0.12] linear-card rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden group">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-bold">
@@ -193,7 +193,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                     className={`py-2 px-1 text-center rounded-xl font-medium border transition-all ${
                       targetTool === tool.id
                         ? 'bg-indigo-600 text-white border-indigo-400 font-bold shadow'
-                        : 'bg-[#121214] text-slate-400 border-slate-800 hover:border-slate-700'
+                        : 'bg-[#0a0c14] text-slate-400 border-slate-800 hover:border-slate-700'
                     }`}
                   >
                     {tool.label}
@@ -213,7 +213,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 placeholder="예: 2026 직장인 연봉/실수령액 계산기"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -228,7 +228,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={targetUser}
                 onChange={(e) => setTargetUser(e.target.value)}
                 placeholder="예: 연봉 협상을 앞둔 직장인"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -243,21 +243,21 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={feature1}
                 onChange={(e) => setFeature1(e.target.value)}
                 placeholder="기능 1"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
               <input
                 type="text"
                 value={feature2}
                 onChange={(e) => setFeature2(e.target.value)}
                 placeholder="기능 2"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
               <input
                 type="text"
                 value={feature3}
                 onChange={(e) => setFeature3(e.target.value)}
                 placeholder="기능 3"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -272,7 +272,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                 value={techStyle}
                 onChange={(e) => setTechStyle(e.target.value)}
                 placeholder="예: 토스 스타일의 다크 슬레이트 & 에메랄드"
-                className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
+                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-white text-xs focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -298,7 +298,7 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
                   className={`px-3.5 py-1.5 rounded-xl font-bold text-xs flex items-center gap-1.5 transition-all ${
                     copied
                       ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
-                      : 'apple-btn-primary text-white font-bold shadow-md shadow-indigo-600/20'
+                      : 'linear-btn-primary rounded-xl font-bold text-white font-bold shadow-md shadow-indigo-600/20'
                   }`}
                 >
                   {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
@@ -308,12 +308,12 @@ export const VibePromptGenerator: React.FC<VibePromptGeneratorProps> = ({
             </div>
 
             {/* Prompt View Box */}
-            <div className="relative flex-1 min-h-[360px] bg-[#121214] rounded-xl border border-slate-800 p-4 font-mono text-xs text-slate-200 overflow-y-auto whitespace-pre-wrap leading-relaxed">
+            <div className="relative flex-1 min-h-[360px] bg-[#0a0c14] rounded-xl border border-slate-800 p-4 font-mono text-xs text-slate-200 overflow-y-auto whitespace-pre-wrap leading-relaxed">
               {generatedPrompt}
             </div>
 
             {/* Guidance for Students */}
-            <div className="bg-[#121214]/80 border border-indigo-500/20 rounded-xl p-3.5 flex items-start gap-3 text-xs text-slate-300">
+            <div className="bg-[#0a0c14]/80 border border-indigo-500/20 rounded-xl p-3.5 flex items-start gap-3 text-xs text-slate-300">
               <Zap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
               <div className="space-y-1">
                 <p className="font-semibold text-white">💡 강사님의 바이브코딩 전달 팁:</p>

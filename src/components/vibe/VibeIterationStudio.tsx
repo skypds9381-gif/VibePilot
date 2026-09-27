@@ -91,7 +91,7 @@ export const VibeIterationStudio: React.FC<VibeIterationStudioProps> = ({
       </div>
 
       {/* Selected Iteration Detail */}
-      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
           <div className="space-y-1">
@@ -116,7 +116,7 @@ export const VibeIterationStudio: React.FC<VibeIterationStudioProps> = ({
         </div>
 
         {/* Teaching Tip */}
-        <div className="bg-[#121214]/80 rounded-xl p-4 border border-cyan-500/20 flex items-start gap-3 text-xs">
+        <div className="bg-[#0a0c14]/80 rounded-xl p-4 border border-cyan-500/20 flex items-start gap-3 text-xs">
           <Lightbulb className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <p className="font-bold text-white">🎓 강사용 지도 꿀팁 (Teaching Point):</p>
@@ -128,7 +128,7 @@ export const VibeIterationStudio: React.FC<VibeIterationStudioProps> = ({
 
         {/* Before Context vs Prompt */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-          <div className="lg:col-span-4 bg-[#121214] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
+          <div className="lg:col-span-4 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
             <span className="text-xs font-bold text-slate-400 flex items-center gap-1">
               <span>⚠️ 기존 문제 상태</span>
             </span>
@@ -141,7 +141,7 @@ export const VibeIterationStudio: React.FC<VibeIterationStudioProps> = ({
             </div>
           </div>
 
-          <div className="lg:col-span-8 bg-[#121214] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
+          <div className="lg:col-span-8 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-emerald-400 font-mono">
                 AI(Claude / Cursor) 채팅창에 그대로 붙여넣을 2차 지시어

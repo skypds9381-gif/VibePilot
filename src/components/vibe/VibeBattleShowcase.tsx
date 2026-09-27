@@ -239,7 +239,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                   placeholder="예: 🍕 우리 동네 야식 룰렛"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
                 />
               </div>
 
@@ -252,7 +252,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                     placeholder="예: 김민지"
                     value={newAuthor}
                     onChange={(e) => setNewAuthor(e.target.value)}
-                    className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
+                    className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
                   />
                 </div>
                 <div>
@@ -262,7 +262,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                     placeholder="예: 비전공자 / 마케터"
                     value={newRole}
                     onChange={(e) => setNewRole(e.target.value)}
-                    className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
+                    className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
                   />
                 </div>
               </div>
@@ -274,7 +274,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                   placeholder="예: 룰렛을 돌려 야식을 정하고 카카오페이 가짜 결제까지 구현했습니다."
                   value={newDesc}
                   onChange={(e) => setNewDesc(e.target.value)}
-                  className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400"
                 />
               </div>
 
@@ -285,7 +285,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                   placeholder="예: 10초 회전 룰렛 만들고 결과 나오면 폭죽 터지는 애니메이션 줘."
                   value={newPrompt}
                   onChange={(e) => setNewPrompt(e.target.value)}
-                  className="w-full bg-[#121214] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400 font-mono"
+                  className="w-full bg-[#0a0c14] border border-slate-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400 font-mono"
                 />
               </div>
 
@@ -379,7 +379,7 @@ export const VibeBattleShowcase: React.FC<VibeBattleShowcaseProps> = ({ isProjec
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-slate-300 leading-relaxed bg-[#121214]/60 p-3 rounded-xl border border-white/[0.12] mb-3">
+                <p className="text-xs text-slate-300 leading-relaxed bg-[#0a0c14]/60 p-3 rounded-xl border border-white/[0.12] mb-3">
                   {item.description}
                 </p>
 

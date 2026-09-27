@@ -95,7 +95,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
       </div>
 
       {/* Selected Workflow Detailed Card */}
-      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
           <div className="space-y-1">
@@ -120,7 +120,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
         </div>
 
         {/* Expected Output */}
-        <div className="bg-[#121214]/80 rounded-xl p-4 border border-amber-500/20 flex items-start gap-3 text-xs">
+        <div className="bg-[#0a0c14]/80 rounded-xl p-4 border border-amber-500/20 flex items-start gap-3 text-xs">
           <PieChart className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <p className="font-bold text-white">결과 산출물:</p>
@@ -134,7 +134,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           
           {/* Sample CSV Data */}
-          <div className="lg:col-span-5 bg-[#121214] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
+          <div className="lg:col-span-5 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
             <div className="flex items-center justify-between">
               <span className="font-bold text-slate-300 flex items-center gap-1.5">
                 <Table className="w-3.5 h-3.5 text-amber-400" />
@@ -157,7 +157,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
           </div>
 
           {/* Prompt */}
-          <div className="lg:col-span-7 bg-[#121214] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
+          <div className="lg:col-span-7 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
             <span className="font-bold text-emerald-400 font-mono">
               Claude / Cursor 투입용 원샷(One-Shot) 프롬프트
             </span>
