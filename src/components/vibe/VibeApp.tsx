@@ -1,3 +1,6 @@
+import { VibeBattleShowcase } from './VibeBattleShowcase';
+import { VibeBeginnerVending } from './VibeBeginnerVending';
+import { VibePortfolioPdfStudio } from './VibePortfolioPdfStudio';
 import React, { useState } from 'react';
 import { VibeHeader, VibeTabType } from './VibeHeader';
 import { VibePromptGenerator } from './VibePromptGenerator';
@@ -113,6 +116,21 @@ export const VibeApp: React.FC<VibeAppProps> = ({ onSwitchToCinema }) => {
 
         {activeTab === 'certificate' && (
           <VibeCertificateStudio
+            isProjectorMode={isProjectorMode}
+          />
+        )}
+        {activeTab === 'battle' && (
+          <VibeBattleShowcase
+            isProjectorMode={isProjectorMode}
+          />
+        )}
+        {activeTab === 'beginner' && (
+          <VibeBeginnerVending
+            isProjectorMode={isProjectorMode}
+          />
+        )}
+        {activeTab === 'portfolio' && (
+          <VibePortfolioPdfStudio
             isProjectorMode={isProjectorMode}
           />
         )}

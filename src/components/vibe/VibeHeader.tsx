@@ -16,7 +16,7 @@ import {
   QrCode,
   Printer,
   Timer,
-  Award,
+  Award, Trophy, FileText,
   ChevronDown,
   Layers,
   Zap,
@@ -35,7 +35,10 @@ export type VibeTabType =
   | 'deploy' 
   | 'debugger' 
   | 'curriculum'
-  | 'certificate';
+  | 'certificate'
+  | 'battle'
+  | 'beginner'
+  | 'portfolio';
 
 interface VibeHeaderProps {
   activeTab: VibeTabType;
@@ -76,7 +79,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
   }, []);
 
   const isCreativeActive = ['multimedia', 'games'].includes(activeTab);
-  const isWorkflowActive = ['office', 'iteration', 'debugger', 'curriculum', 'certificate'].includes(activeTab);
+  const isWorkflowActive = ['office', 'iteration', 'debugger', 'curriculum', 'certificate', 'battle', 'beginner', 'portfolio'].includes(activeTab);
 
   const getCreativeLabel = () => {
     if (activeTab === 'multimedia') return 'PPT·영상·음악';
@@ -85,6 +88,9 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
   };
 
   const getWorkflowLabel = () => {
+    if (activeTab === 'beginner') return '초보자 말문트임';
+    if (activeTab === 'battle') return '실습 배틀 쇼케이스';
+    if (activeTab === 'portfolio') return '포트폴리오 PDF';
     if (activeTab === 'office') return '엑셀·데이터';
     if (activeTab === 'iteration') return '티키타카 수정';
     if (activeTab === 'debugger') return '에러 응급실';
@@ -320,6 +326,59 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
                     <p className="text-[10px] text-slate-400 opacity-90">이름 입력 시 금박 수료증 인쇄</p>
                   </div>
                 </button>
+
+                <div className="my-1 border-t border-slate-800" />
+
+                {/* 1. 10분 실습 자랑 배틀 */}
+                <button
+                  onClick={() => {
+                    onSelectTab('battle');
+                    setIsWorkflowDropdownOpen(false);
+                  }}
+                  className={`w-full text-left px-3 py-2 rounded-lg flex items-center gap-2.5 transition-colors text-xs ${
+                    activeTab === 'battle' ? 'bg-indigo-600 text-white' : 'text-amber-300 hover:bg-slate-800'
+                  }`}
+                >
+                  <Trophy className="w-4 h-4 text-amber-400" />
+                  <div>
+                    <p className="font-bold">🏆 10분 실습 자랑 배틀</p>
+                    <p className="text-[10px] text-slate-400 opacity-90">명예의 전당 & 실시간 수강생 투표</p>
+                  </div>
+                </button>
+
+                {/* 2. 초보자 말문 트임기 */}
+                <button
+                  onClick={() => {
+                    onSelectTab('beginner');
+                    setIsWorkflowDropdownOpen(false);
+                  }}
+                  className={`w-full text-left px-3 py-2 rounded-lg flex items-center gap-2.5 transition-colors text-xs ${
+                    activeTab === 'beginner' ? 'bg-indigo-600 text-white' : 'text-cyan-300 hover:bg-slate-800'
+                  }`}
+                >
+                  <Wand2 className="w-4 h-4 text-cyan-400" />
+                  <div>
+                    <p className="font-bold">🪄 초보자 말문 트임기</p>
+                    <p className="text-[10px] text-slate-400 opacity-90">문과생/비전공자 전용 1초 자판기</p>
+                  </div>
+                </button>
+
+                {/* 3. 원클릭 포트폴리오 PDF */}
+                <button
+                  onClick={() => {
+                    onSelectTab('portfolio');
+                    setIsWorkflowDropdownOpen(false);
+                  }}
+                  className={`w-full text-left px-3 py-2 rounded-lg flex items-center gap-2.5 transition-colors text-xs ${
+                    activeTab === 'portfolio' ? 'bg-indigo-600 text-white' : 'text-emerald-300 hover:bg-slate-800'
+                  }`}
+                >
+                  <FileText className="w-4 h-4 text-emerald-400" />
+                  <div>
+                    <p className="font-bold">📄 원클릭 포트폴리오 PDF</p>
+                    <p className="text-[10px] text-slate-400 opacity-90">취준생·직장인 이직 1장 출력</p>
+                  </div>
+                </button>
               </div>
             )}
           </div>
@@ -409,6 +468,9 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               {activeTab === 'debugger' && '에러 응급실'}
               {activeTab === 'curriculum' && '수업 커리큘럼'}
               {activeTab === 'certificate' && '수료증 발급'}
+              {activeTab === 'battle' && '10분 실습 자랑 배틀'}
+              {activeTab === 'beginner' && '초보자 말문 트임기'}
+              {activeTab === 'portfolio' && '원클릭 포트폴리오 PDF'}
             </span>
           </div>
 
