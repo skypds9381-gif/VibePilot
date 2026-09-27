@@ -13,6 +13,7 @@ export interface MovieNewsArticle {
   relatedMovies: string[];
   imageUrl?: string;
   quote?: string;
+  originUrl?: string;
 }
 
 export const MOVIE_NEWS_LIST: MovieNewsArticle[] = [

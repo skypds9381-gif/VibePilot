@@ -19,9 +19,11 @@ function cleanHtml(text: string): string {
 // Parse Google News RSS XML string to JSON items
 function parseGoogleNewsRss(xmlText: string) {
   const items: any[] = [];
+  const seenTitles = new Set<string>();
   const itemMatches = xmlText.match(/<item>([\s\S]*?)<\/item>/g) || [];
 
-  itemMatches.forEach((itemXml, index) => {
+  for (let index = 0; index < itemMatches.length; index++) {
+    const itemXml = itemMatches[index];
     const titleMatch = itemXml.match(/<title>([\s\S]*?)<\/title>/);
     const linkMatch = itemXml.match(/<link>([\s\S]*?)<\/link>/);
     const pubDateMatch = itemXml.match(/<pubDate>([\s\S]*?)<\/pubDate>/);
@@ -36,9 +38,16 @@ function parseGoogleNewsRss(xmlText: string) {
       press = parts.pop() || press;
       rawTitle = parts.join(' - ');
     }
-    const title = cleanHtml(rawTitle);
+    const title = cleanHtml(rawTitle).trim();
     const link = linkMatch ? cleanHtml(linkMatch[1]) : '';
     const pubDateRaw = pubDateMatch ? pubDateMatch[1] : '';
+
+    if (!title || !link) continue;
+
+    // Deduplicate similar headlines
+    const simplified = title.replace(/[^가-힣a-zA-Z0-9]/g, '').slice(0, 16);
+    if (seenTitles.has(simplified)) continue;
+    seenTitles.add(simplified);
 
     let formattedDate = '방금 전';
     if (pubDateRaw) {
@@ -55,45 +64,46 @@ function parseGoogleNewsRss(xmlText: string) {
       }
     }
 
-    // Determine category based on title keywords
+    // Smart classification
     let category: '속보' | '박스오피스' | '흥행' | '신작개봉' | '영화제' | '인터뷰' | '비하인드' = '속보';
-    if (title.includes('박스오피스') || title.includes('관객') || title.includes('매출')) {
+    if (title.includes('박스오피스') || title.includes('관객') || title.includes('예매') || title.includes('순위') || title.includes('매출')) {
       category = '박스오피스';
-    } else if (title.includes('개봉') || title.includes('출격') || title.includes('개막') || title.includes('상영')) {
+    } else if (title.includes('개봉') || title.includes('출격') || title.includes('신작') || title.includes('공개') || title.includes('티저') || title.includes('포스터')) {
       category = '신작개봉';
-    } else if (title.includes('영화제') || title.includes('수상') || title.includes('칸') || title.includes('베니스') || title.includes('아카데미')) {
+    } else if (title.includes('영화제') || title.includes('수상') || title.includes('칸') || title.includes('베니스') || title.includes('아카데미') || title.includes('부산국제영화제') || title.includes('부국제')) {
       category = '영화제';
-    } else if (title.includes('인터뷰') || title.includes('감독') || title.includes('배우') || title.includes('만나다')) {
+    } else if (title.includes('인터뷰') || title.includes('감독') || title.includes('배우') || title.includes('만나다') || title.includes('캐스팅') || title.includes('출연')) {
       category = '인터뷰';
-    } else if (title.includes('돌파') || title.includes('흥행') || title.includes('1위')) {
+    } else if (title.includes('돌파') || title.includes('흥행') || title.includes('1위') || title.includes('신드롬')) {
       category = '흥행';
     }
 
-    // Clean clean summary description without raw Google HTML links
-    const cleanSummaryText = `${press}에서 보도한 최신 영화 소식입니다. 『${title}』 관련 상세 내용은 기사 상세보기를 통해 확인하실 수 있습니다.`;
+    const cleanSummaryText = `${press}에서 보도한 최신 영화 소식입니다. 『${title}』 관련 상세 내용은 카드를 클릭하거나 언론사 원문을 통해 확인하실 수 있습니다.`;
 
-    if (title && link) {
-      items.push({
-        id: `gnews-${index}-${Date.now()}`,
-        category,
-        title,
-        summary: cleanSummaryText,
-        content: [
-          `${press} 보도: ${title}`,
-          '실시간 극장가 및 영화계 최신 동향을 신속하게 집계하여 전달해 드립니다.',
-          '기사 전문 및 상세 사진은 아래 언론사 공식 원문 보기 링크를 통해 바로 확인하실 수 있습니다.'
-        ],
-        press: cleanHtml(press),
-        reporter: '실시간 속보',
-        publishedAt: formattedDate,
-        viewCount: 1200 + (itemMatches.length - index) * 350,
-        likeCount: 45 + (itemMatches.length - index) * 12,
-        badge: index === 0 ? '실시간 속보' : index < 3 ? 'HOT' : undefined,
-        relatedMovies: ['최신 극장 개봉작'],
-        linkUrl: link,
-      });
-    }
-  });
+    items.push({
+      id: `gnews-${index}-${Date.now()}`,
+      category,
+      title,
+      summary: cleanSummaryText,
+      content: [
+        `${press} 보도: ${title}`,
+        '실시간 극장가 및 영화계 최신 동향을 신속하게 집계하여 전달해 드립니다.',
+        '기사 전문 및 상세 사진은 아래 언론사 공식 원문 보기 링크를 통해 바로 확인하실 수 있습니다.'
+      ],
+      press,
+      reporter: `${press} 문화부`,
+      publishedAt: formattedDate,
+      viewCount: Math.floor(Math.random() * 8000) + 1200,
+      likeCount: Math.floor(Math.random() * 250) + 20,
+      badge: category === '속보' ? '실시간 속보' : (category === '신작개봉' ? '신작 소식' : (category === '박스오피스' ? '차트 분석' : undefined)),
+      relatedMovies: [],
+      quote: `"${title}" - ${press}`,
+      originUrl: link
+    });
+
+    // Limit to top 15 clean, high-priority real-time articles
+    if (items.length >= 15) break;
+  }
 
   return items;
 }
