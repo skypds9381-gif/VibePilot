@@ -1,0 +1,6 @@
+{
+  "name": "무드매거진 - 감성 영화 큐레이션 & 실시간 박스오피스",
+  "description": "오늘 밤 당신의 무드에 꼭 맞는 감성 영화 큐레이션 매거진. 실시간 박스오피스, 개봉예정 D-DAY, 영화 OST 감상실.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
