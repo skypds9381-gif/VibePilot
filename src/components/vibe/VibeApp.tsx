@@ -38,14 +38,13 @@ export const VibeApp: React.FC<VibeAppProps> = ({ onSwitchToCinema }) => {
   };
 
   return (
-    <div className={`min-h-screen aurora-bg text-slate-100 flex flex-col font-sans transition-all relative overflow-x-hidden selection:bg-indigo-500 selection:text-white ${
+    <div className={`min-h-screen apple-canvas text-[#F5F5F7] flex flex-col font-sans transition-all relative overflow-x-hidden selection:bg-[#0071E3] selection:text-white antialiased ${
       isProjectorMode ? 'contrast-125' : ''
     }`}>
-      {/* Aurora Ambient Background Orbs */}
+      {/* Subtle Apple Ambient Glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute -top-40 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-pink-600/10 rounded-full blur-[140px]" />
-        <div className="absolute -bottom-20 left-10 w-[550px] h-[550px] bg-cyan-600/10 rounded-full blur-[130px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2997FF]/10 via-transparent to-transparent blur-[80px]" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-[#5E5CE6]/05 blur-[100px]" />
       </div>
       {/* Vibe Studio Navigation Bar (Refactored Zero-Scroll Cluster) */}
       <VibeHeader

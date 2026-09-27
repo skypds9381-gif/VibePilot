@@ -31,7 +31,7 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-3xl border border-amber-900/40 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl print:hidden">
+      <div className="rounded-[24px] border border-amber-900/40 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl print:hidden">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-bold">
@@ -58,7 +58,7 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
       </div>
 
       {/* Input Controls (Hidden in Print) */}
-      <div className="prism-card border-white/10 rounded-2xl p-5 shadow-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 print:hidden text-xs">
+      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-5 shadow-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 print:hidden text-xs">
         <div>
           <label className="block text-slate-400 font-bold mb-1 flex items-center gap-1">
             <User className="w-3 h-3 text-amber-400" />
@@ -68,7 +68,7 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
             type="text"
             value={studentName}
             onChange={(e) => setStudentName(e.target.value)}
-            className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
+            className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
           />
         </div>
 
@@ -81,7 +81,7 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
             type="text"
             value={courseTitle}
             onChange={(e) => setCourseTitle(e.target.value)}
-            className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
+            className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
           />
         </div>
 
@@ -94,7 +94,7 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
             type="text"
             value={completionDate}
             onChange={(e) => setCompletionDate(e.target.value)}
-            className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
+            className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
           />
         </div>
 
@@ -107,14 +107,14 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
             type="text"
             value={instructorName}
             onChange={(e) => setInstructorName(e.target.value)}
-            className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
+            className="w-full bg-[#161618]/80 border border-white/[0.12] rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400"
           />
         </div>
       </div>
 
       {/* Printable Certificate Canvas (A4 Landscape Layout) */}
       <div className="flex justify-center p-0 sm:p-4">
-        <div className="w-full max-w-4xl bg-slate-950 text-slate-100 rounded-3xl border-4 border-amber-500/50 p-8 sm:p-12 shadow-2xl relative overflow-hidden print:bg-white print:text-black print:border-8 print:border-[#926F34] print:p-12 print:shadow-none print:w-full print:max-w-none print:m-0">
+        <div className="w-full max-w-4xl bg-[#121214] text-slate-100 rounded-[24px] border-4 border-amber-500/50 p-8 sm:p-12 shadow-2xl relative overflow-hidden print:bg-white print:text-black print:border-8 print:border-[#926F34] print:p-12 print:shadow-none print:w-full print:max-w-none print:m-0">
           
           {/* Decorative Corner Ornaments */}
           <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-amber-400/80 print:border-[#926F34]" />
@@ -157,7 +157,7 @@ export const VibeCertificateStudio: React.FC<VibeCertificateStudioProps> = ({
             </div>
 
             {/* Gold Seal & Signatures */}
-            <div className="pt-6 sm:pt-10 flex items-center justify-between border-t border-white/10 print:border-gray-300 text-xs sm:text-sm">
+            <div className="pt-6 sm:pt-10 flex items-center justify-between border-t border-white/[0.12] print:border-gray-300 text-xs sm:text-sm">
               <div className="text-left font-mono">
                 <p className="text-slate-400 print:text-gray-600 text-xs">수료일자</p>
                 <p className="font-bold text-white print:text-black">{completionDate}</p>

@@ -105,38 +105,38 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#070913]/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20" ref={dropdownRef}>
+    <header className="sticky top-0 z-40 w-full bg-[#000000]/70 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all" ref={dropdownRef}>
       <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
         
-        {/* Left: Brand Logo */}
+        {/* Left: Apple Style Brand Logo */}
         <div 
-          className="flex items-center gap-2 sm:gap-2.5 shrink-0 cursor-pointer" 
+          className="flex items-center gap-2.5 shrink-0 cursor-pointer group select-none" 
           onClick={() => handleMobileNavClick('generator')}
         >
-          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
-            <Zap className="w-4 h-4 sm:w-5 sm:h-5 fill-white" />
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-[14px] bg-[#1c1c1e] border border-white/20 flex items-center justify-center text-white shadow-md shadow-black/40 group-hover:scale-105 active:scale-95 transition-all">
+            <Zap className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#2997FF] fill-[#2997FF]" />
           </div>
           <div>
-            <div className="flex items-center gap-1.5">
-              <span className="font-extrabold text-base sm:text-lg tracking-tight text-white font-sans">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-base sm:text-lg tracking-tight text-white font-sans flex items-center gap-1.5">
                 VibePilot
               </span>
-              <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-200 font-bold hidden md:inline-block shadow-[0_0_12px_rgba(168,85,247,0.2)]">
-                💎 Diamond Aurora
+              <span className="text-[10px] tracking-tight font-medium px-2 py-0.5 rounded-full bg-white/[0.08] border border-white/[0.12] text-[#86868B] group-hover:text-white transition-colors hidden md:inline-block">
+                🍎 Cupertino Pro
               </span>
             </div>
           </div>
         </div>
 
         {/* Center: Desktop Navigation Menu (Zero Scrollbar on Desktop, hidden on Mobile) */}
-        <nav className="hidden lg:flex items-center bg-white/[0.04] backdrop-blur-md p-1 rounded-xl border border-white/10 text-xs gap-1 shadow-inner">
+        <nav className="hidden lg:flex items-center apple-segmented-bar text-xs gap-1">
           
           {/* 1. 프롬프트 마스터 */}
           <button
             onClick={() => onSelectTab('generator')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'generator'
-                ? 'aurora-button text-white shadow-md font-bold'
+                ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -149,7 +149,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             onClick={() => onSelectTab('playground')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'playground'
-                ? 'aurora-button text-white shadow-md font-bold'
+                ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -166,7 +166,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                 isCreativeActive
-                  ? 'aurora-button text-white shadow-md font-bold'
+                  ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
               }`}
             >
@@ -176,7 +176,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             </button>
 
             {isCreativeDropdownOpen && (
-              <div className="absolute top-full left-0 mt-1.5 w-56 bg-[#0f1123]/95 backdrop-blur-2xl border border-purple-500/30 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-1 shadow-[0_15px_50px_rgba(0,0,0,0.7)]">
+              <div className="absolute top-full left-0 mt-1.5 w-56 bg-[#1c1c1e]/90 backdrop-blur-2xl border border-white/[0.14] rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-2 z-50 animate-in fade-in slide-in-from-top-2">
                 <button
                   onClick={() => {
                     onSelectTab('multimedia');
@@ -217,7 +217,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             onClick={() => onSelectTab('deploy')}
             className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
               activeTab === 'deploy'
-                ? 'aurora-button text-white shadow-md font-bold'
+                ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -234,7 +234,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
               }}
               className={`px-3 py-1.5 rounded-lg font-medium transition-all flex items-center gap-1.5 ${
                 isWorkflowActive
-                  ? 'aurora-button text-white shadow-md font-bold'
+                  ? 'apple-segmented-pill-active text-white shadow-sm font-medium'
                   : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
               }`}
             >
@@ -244,7 +244,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
             </button>
 
             {isWorkflowDropdownOpen && (
-              <div className="absolute top-full right-0 mt-1.5 w-56 bg-[#0f1123]/95 backdrop-blur-2xl border border-purple-500/30 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-1 shadow-[0_15px_50px_rgba(0,0,0,0.7)]">
+              <div className="absolute top-full right-0 mt-1.5 w-56 bg-[#1c1c1e]/90 backdrop-blur-2xl border border-white/[0.14] rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.8)] p-2 z-50 animate-in fade-in slide-in-from-top-2">
                 <button
                   onClick={() => {
                     onSelectTab('office');
@@ -390,7 +390,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* 실습 라이브 타이머 */}
           <button
             onClick={onOpenTimerModal}
-            className="p-1.5 sm:p-2 rounded-xl bg-white/[0.05] hover:bg-rose-500/20 text-rose-300 hover:text-rose-200 border border-rose-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-2 rounded-[14px] bg-[#1c1c1e] hover:bg-[#2c2c2e] active:scale-95 text-[#FF453A] border border-white/[0.12] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="실습 라이브 타이머"
           >
             <Timer className="w-4 h-4" />
@@ -400,7 +400,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* 폰 QR */}
           <button
             onClick={onOpenQrModal}
-            className="p-1.5 sm:p-2 rounded-xl bg-white/[0.05] hover:bg-cyan-500/20 text-cyan-300 hover:text-cyan-200 border border-cyan-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-2 rounded-[14px] bg-[#1c1c1e] hover:bg-[#2c2c2e] active:scale-95 text-[#64D2FF] border border-white/[0.12] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="학생 스마트폰 접속용 칠판 QR 생성"
           >
             <QrCode className="w-4 h-4" />
@@ -410,7 +410,7 @@ export const VibeHeader: React.FC<VibeHeaderProps> = ({
           {/* A4 치트시트 */}
           <button
             onClick={onOpenCheatSheetModal}
-            className="p-1.5 sm:p-2 rounded-xl bg-white/[0.05] hover:bg-amber-500/20 text-amber-300 hover:text-amber-200 border border-amber-500/30 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="p-2 rounded-[14px] bg-[#1c1c1e] hover:bg-[#2c2c2e] active:scale-95 text-[#FFD60A] border border-white/[0.12] transition-all text-xs font-semibold flex items-center gap-1.5 transition-colors"
             title="A4 1장 학생 배포용 치트시트 인쇄"
           >
             <Printer className="w-4 h-4" />

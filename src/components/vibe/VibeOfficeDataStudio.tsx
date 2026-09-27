@@ -41,7 +41,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-3xl border border-amber-900/40 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
+      <div className="rounded-[24px] border border-amber-900/40 bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
         <div className="space-y-2 max-w-3xl">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-bold">
             <FileSpreadsheet className="w-3.5 h-3.5 text-amber-400" />
@@ -65,10 +65,10 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
             <div
               key={wf.id}
               onClick={() => setSelectedWorkflow(wf)}
-              className={`cursor-pointer rounded-3xl border p-4 transition-all duration-200 flex flex-col justify-between space-y-3 ${
+              className={`cursor-pointer rounded-[24px] border p-4 transition-all duration-200 flex flex-col justify-between space-y-3 ${
                 isSelected
                   ? 'bg-slate-900/90 border-amber-400 shadow-lg shadow-amber-500/10 ring-1 ring-amber-400/50'
-                  : 'bg-slate-900/50 border-white/10 hover:border-slate-700 hover:bg-slate-900/80'
+                  : 'bg-slate-900/50 border-white/[0.12] hover:border-slate-700 hover:bg-slate-900/80'
               }`}
             >
               <div className="space-y-2">
@@ -85,7 +85,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-amber-400 font-semibold">
+              <div className="pt-2 border-t border-white/[0.12] flex items-center justify-between text-xs text-amber-400 font-semibold">
                 <span>프로젝트 명세 열기</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -95,9 +95,9 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
       </div>
 
       {/* Selected Workflow Detailed Card */}
-      <div className="prism-card border-white/10 rounded-2xl p-6 shadow-xl space-y-6">
+      <div className="apple-glass-card border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
         
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
           <div className="space-y-1">
             <span className="text-xs font-bold text-amber-400 font-mono">
               [{selectedWorkflow.targetRole} 실무 자동화]
@@ -120,7 +120,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
         </div>
 
         {/* Expected Output */}
-        <div className="bg-slate-950/80 rounded-xl p-4 border border-amber-500/20 flex items-start gap-3 text-xs">
+        <div className="bg-[#121214]/80 rounded-xl p-4 border border-amber-500/20 flex items-start gap-3 text-xs">
           <PieChart className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <p className="font-bold text-white">결과 산출물:</p>
@@ -134,7 +134,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           
           {/* Sample CSV Data */}
-          <div className="lg:col-span-5 bg-slate-950 p-4 rounded-xl border border-white/10 space-y-2 text-xs">
+          <div className="lg:col-span-5 bg-[#121214] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
             <div className="flex items-center justify-between">
               <span className="font-bold text-slate-300 flex items-center gap-1.5">
                 <Table className="w-3.5 h-3.5 text-amber-400" />
@@ -148,7 +148,7 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
                 <span>데이터 복사</span>
               </button>
             </div>
-            <div className="p-3 bg-slate-900 rounded-lg border border-white/10 font-mono text-[11px] text-slate-300 whitespace-pre overflow-x-auto leading-relaxed">
+            <div className="p-3 bg-slate-900 rounded-lg border border-white/[0.12] font-mono text-[11px] text-slate-300 whitespace-pre overflow-x-auto leading-relaxed">
               {selectedWorkflow.sampleDataPreview}
             </div>
             <p className="text-[11px] text-slate-500 leading-normal">
@@ -157,11 +157,11 @@ export const VibeOfficeDataStudio: React.FC<VibeOfficeDataStudioProps> = ({
           </div>
 
           {/* Prompt */}
-          <div className="lg:col-span-7 bg-slate-950 p-4 rounded-xl border border-white/10 space-y-2 text-xs">
+          <div className="lg:col-span-7 bg-[#121214] p-4 rounded-xl border border-white/[0.12] space-y-2 text-xs">
             <span className="font-bold text-emerald-400 font-mono">
               Claude / Cursor 투입용 원샷(One-Shot) 프롬프트
             </span>
-            <div className="p-3 bg-slate-900 rounded-lg border border-white/10 font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
+            <div className="p-3 bg-slate-900 rounded-lg border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
               {selectedWorkflow.vibePrompt}
             </div>
           </div>

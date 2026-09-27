@@ -99,3 +99,114 @@
   box-shadow: 0 6px 24px 0 rgba(99, 102, 241, 0.6),
               0 0 20px 2px rgba(236, 72, 153, 0.4);
 }
+
+
+/* ==========================================================================
+   Apple Cupertino Pro Design System (iOS / macOS HIG Aesthetic)
+   ========================================================================== */
+
+:root {
+  --apple-bg: #000000;
+  --apple-card-bg: rgba(28, 28, 30, 0.65);
+  --apple-card-border: rgba(255, 255, 255, 0.12);
+  --apple-blue: #2997FF;
+  --apple-blue-hover: #0071E3;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Pretendard", sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* Apple Space Titanium & Deep Oled Canvas */
+.apple-canvas {
+  background-color: #000000;
+  background-image: 
+    radial-gradient(at 50% 0%, rgba(41, 151, 255, 0.08) 0px, transparent 60%),
+    radial-gradient(at 100% 100%, rgba(120, 119, 198, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 255, 255, 0.02) 0px, transparent 50%);
+  color: #F5F5F7;
+}
+
+/* iOS Control Center Frosted Glass Material */
+.apple-glass {
+  background: rgba(28, 28, 30, 0.68);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    0 10px 30px -5px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+.apple-glass-card {
+  background: linear-gradient(180deg, rgba(38, 38, 42, 0.75) 0%, rgba(24, 24, 28, 0.65) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 
+    0 14px 44px -8px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Apple Pro Blue Primary Action Button */
+.apple-btn-primary {
+  background: #0071E3;
+  background-image: linear-gradient(180deg, #2997FF 0%, #0071E3 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 14px;
+  box-shadow: 
+    0 4px 14px 0 rgba(0, 113, 227, 0.38),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-btn-primary:hover {
+  background-image: linear-gradient(180deg, #47A3FF 0%, #0A84FF 100%);
+  box-shadow: 
+    0 6px 20px 0 rgba(0, 113, 227, 0.5),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45);
+}
+
+.apple-btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* Apple Segmented Capsule Control */
+.apple-segmented-bar {
+  background: rgba(36, 36, 40, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.apple-segmented-pill-active {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Apple Subtitle & Metadata text color */
+.apple-subtext {
+  color: #86868B;
+}
