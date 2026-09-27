@@ -50,8 +50,8 @@ const BEGINNER_PROMPTS: PromptItem[] = [
     category: 'styling',
     categoryLabel: '🎨 디자인 예쁘게 만들기',
     userThought: '"만들긴 했는데 디자인이 너무 90년대 홈페이지 같아요 ㅠㅠ"',
-    vibePrompt: '현재 디자인이 너무 투박해. 토스(Toss)나 에어비앤비처럼 둥근 모서리(rounded-[20px]), 부드러운 그림자(shadow-xl), 세련된 여백과 고대비 폰트를 적용해서 현대적인 핀테크 앱 느낌으로 전면 리디자인해줘.',
-    whyItWorks: '레퍼런스 브랜드(토스/에어비앤비)와 구체적 CSS 키워드(rounded-[20px], shadow-xl)를 던져주면 AI가 감각적인 디자인 시스템을 일괄 적용합니다.'
+    vibePrompt: '현재 디자인이 너무 투박해. 토스(Toss)나 에어비앤비처럼 둥근 모서리(rounded-2xl), 부드러운 그림자(shadow-xl), 세련된 여백과 고대비 폰트를 적용해서 현대적인 핀테크 앱 느낌으로 전면 리디자인해줘.',
+    whyItWorks: '레퍼런스 브랜드(토스/에어비앤비)와 구체적 CSS 키워드(rounded-2xl, shadow-xl)를 던져주면 AI가 감각적인 디자인 시스템을 일괄 적용합니다.'
   },
   {
     id: 'bv-4',
@@ -125,7 +125,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
   return (
     <div className={`space-y-8 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       {/* Hero Banner */}
-      <div className="relative overflow-hidden rounded-[24px] border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl">
+      <div className="relative overflow-hidden rounded-3xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 via-slate-900 to-slate-950 p-6 sm:p-8 shadow-2xl">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 relative z-10">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-bold">
@@ -162,7 +162,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
             className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
               selectedCat === c.id
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-white/[0.12]'
+                : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-white/10'
             }`}
           >
             {c.label}
@@ -178,7 +178,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
           return (
             <div
               key={item.id}
-              className="rounded-[24px] border border-white/[0.12] bg-slate-900/90 hover:border-indigo-500/40 p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group shadow-lg space-y-4"
+              className="rounded-3xl border border-white/10 bg-slate-900/90 hover:border-indigo-500/40 p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between group shadow-lg space-y-4"
             >
               <div className="space-y-3">
                 {/* Header */}
@@ -194,7 +194,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
                 </div>
 
                 {/* User's natural thought */}
-                <div className="p-3 rounded-xl bg-[#07080f]/90 border border-white/[0.12]/80">
+                <div className="p-3 rounded-xl bg-[#090b14]/90 border border-white/10/80">
                   <p className="text-[11px] font-bold text-slate-400 flex items-center gap-1 mb-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-rose-400 inline-block" />
                     내가 머릿속으로 하는 생각:
@@ -216,7 +216,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
                       className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
                         isCopied
                           ? 'bg-emerald-600 text-white'
-                          : 'linear-btn-primary rounded-xl font-bold text-white shadow-sm'
+                          : 'aurora-button rounded-2xl font-bold text-white shadow-sm'
                       }`}
                     >
                       {isCopied ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
@@ -236,7 +236,7 @@ export const VibeBeginnerVending: React.FC<VibeBeginnerVendingProps> = ({ isProj
               </div>
 
               {/* Bottom Quick Action */}
-              <div className="pt-2 border-t border-white/[0.12] flex items-center justify-between text-xs">
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs">
                 <span className="text-[10px] text-slate-500">Claude · Cursor · ChatGPT 100% 호환</span>
                 <button
                   onClick={() => handleCopy(item.id, item.vibePrompt)}

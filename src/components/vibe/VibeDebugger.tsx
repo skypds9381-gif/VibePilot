@@ -60,7 +60,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-[24px] border border-rose-900/40 bg-gradient-to-br from-rose-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
+      <div className="rounded-3xl border border-rose-900/40 bg-gradient-to-br from-rose-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-mono font-bold">
@@ -100,8 +100,8 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
         
         {/* Left: Input Error Log (5 cols) */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-5 space-y-4 shadow-lg">
-            <div className="flex items-center justify-between border-b border-white/[0.12] pb-3">
+          <div className="prism-card rounded-3xl border-white/10 rounded-2xl p-5 space-y-4 shadow-lg">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <h3 className="font-bold text-white text-sm flex items-center gap-2">
                 <Bug className="w-4 h-4 text-rose-400" />
                 <span>에러 로그 입력</span>
@@ -118,7 +118,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
                 onChange={(e) => setErrorLog(e.target.value)}
                 rows={7}
                 placeholder="예: IndentationError: unexpected indent..."
-                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl p-3.5 text-xs text-rose-200 font-mono focus:outline-none focus:border-rose-500 leading-relaxed resize-none"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl p-3.5 text-xs text-rose-200 font-mono focus:outline-none focus:border-rose-500 leading-relaxed resize-none"
               />
             </div>
 
@@ -131,11 +131,11 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
                 value={errorContext}
                 onChange={(e) => setErrorContext(e.target.value)}
                 placeholder="예: 버튼을 눌렀는데 화면이 반응이 없고 콘솔에 뜸"
-                className="w-full bg-[#07080f]/90 border border-white/[0.12] rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-rose-500"
+                className="w-full bg-[#090b14]/90 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-rose-500"
               />
             </div>
 
-            <div className="bg-[#0a0c14]/60 rounded-xl p-3 border border-white/[0.12] text-xs text-slate-400 space-y-1">
+            <div className="bg-[#090b14]/90/60 rounded-xl p-3 border border-white/10 text-xs text-slate-400 space-y-1">
               <p className="font-semibold text-slate-300 flex items-center gap-1">
                 <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
                 <span>강사용 설명 꿀팁:</span>
@@ -151,9 +151,9 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
 
         {/* Right: AI Fix Prompt (7 cols) */}
         <div className="lg:col-span-7 flex flex-col space-y-4">
-          <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-5 flex-1 flex flex-col shadow-lg space-y-3">
+          <div className="prism-card rounded-3xl border-white/10 rounded-2xl p-5 flex-1 flex flex-col shadow-lg space-y-3">
             
-            <div className="flex items-center justify-between border-b border-white/[0.12] pb-3">
+            <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-emerald-400" />
                 <h3 className="font-bold text-white text-sm">
@@ -174,7 +174,7 @@ ${errorLog.trim() || '에러 로그가 입력되지 않았습니다.'}
               </button>
             </div>
 
-            <div className="flex-1 min-h-[300px] bg-[#0a0c14] rounded-xl border border-white/[0.12] p-4 font-mono text-xs text-slate-200 overflow-y-auto whitespace-pre-wrap leading-relaxed">
+            <div className="flex-1 min-h-[300px] bg-[#090b14]/90 rounded-xl border border-white/10 p-4 font-mono text-xs text-slate-200 overflow-y-auto whitespace-pre-wrap leading-relaxed">
               {fixPrompt}
             </div>
 

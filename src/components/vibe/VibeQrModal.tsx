@@ -37,7 +37,7 @@ export const VibeQrModal: React.FC<VibeQrModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
-      <div className="bg-[#0F131E] border border-cyan-500/40 rounded-[24px] max-w-md w-full p-6 text-center space-y-6 shadow-2xl relative">
+      <div className="bg-[#0F131E] border border-cyan-500/40 rounded-3xl max-w-md w-full p-6 text-center space-y-6 shadow-2xl relative">
         
         {/* Close Button */}
         <button
@@ -62,7 +62,7 @@ export const VibeQrModal: React.FC<VibeQrModalProps> = ({
         </div>
 
         {/* QR Code Container */}
-        <div className="flex justify-center p-4 bg-[#0a0c14] rounded-[24px] border-2 border-cyan-500/30 shadow-inner">
+        <div className="flex justify-center p-4 bg-[#090b14]/90 rounded-3xl border-2 border-cyan-500/30 shadow-inner">
           <img
             src={qrApiUrl}
             alt="Vibe App QR Code"
@@ -72,7 +72,7 @@ export const VibeQrModal: React.FC<VibeQrModalProps> = ({
 
         {/* URL Input & Copy */}
         <div className="space-y-2">
-          <div className="flex items-center gap-2 bg-[#0a0c14] p-2 rounded-xl border border-white/[0.12]">
+          <div className="flex items-center gap-2 bg-[#090b14]/90 p-2 rounded-xl border border-white/10">
             <input
               type="text"
               value={url}
@@ -96,7 +96,7 @@ export const VibeQrModal: React.FC<VibeQrModalProps> = ({
         {/* Action Button */}
         <button
           onClick={onClose}
-          className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold text-xs rounded-xl border border-white/[0.12] transition-colors"
+          className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold text-xs rounded-xl border border-white/10 transition-colors"
         >
           닫기
         </button>

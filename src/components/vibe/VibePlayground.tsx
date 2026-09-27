@@ -66,10 +66,10 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
   };
 
   return (
-    <div className={`space-y-4 ${isFullscreen ? 'fixed inset-0 z-50 bg-[#0a0c14] p-4' : ''}`}>
+    <div className={`space-y-4 ${isFullscreen ? 'fixed inset-0 z-50 bg-[#090b14]/90 p-4' : ''}`}>
       
       {/* Playground Top Bar */}
-      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-4 flex flex-wrap items-center justify-between gap-4 shadow-lg">
+      <div className="prism-card rounded-3xl border-white/10 rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4 shadow-lg">
         
         {/* Left: Presets & Controls */}
         <div className="flex items-center gap-3">
@@ -80,7 +80,7 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
             </h3>
           </div>
 
-          <div className="hidden sm:flex items-center gap-1.5 border-l border-white/[0.12] pl-3">
+          <div className="hidden sm:flex items-center gap-1.5 border-l border-white/10 pl-3">
             <span className="text-xs text-slate-400">샘플 즉시 실행:</span>
             <button
               onClick={() => handleLoadSample('salary')}
@@ -98,7 +98,7 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
         </div>
 
         {/* Center: View Switcher (Desktop/Tablet/Mobile) */}
-        <div className="hidden md:flex items-center bg-[#0a0c14] p-1 rounded-xl border border-white/[0.12] text-xs">
+        <div className="hidden md:flex items-center bg-[#090b14]/90 p-1 rounded-xl border border-white/10 text-xs">
           <button
             onClick={() => setViewDevice('desktop')}
             className={`px-2.5 py-1 rounded-lg flex items-center gap-1.5 transition-colors ${
@@ -134,7 +134,7 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
         {/* Right: Actions */}
         <div className="flex items-center gap-2">
           {/* Split / Code / Preview Toggle on Mobile */}
-          <div className="flex lg:hidden items-center bg-[#0a0c14] p-1 rounded-xl border border-white/[0.12] text-xs">
+          <div className="flex lg:hidden items-center bg-[#090b14]/90 p-1 rounded-xl border border-white/10 text-xs">
             <button
               onClick={() => setActiveTab('code')}
               className={`px-2.5 py-1 rounded-lg ${activeTab === 'code' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
@@ -181,10 +181,10 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
       <div className={`grid grid-cols-1 lg:grid-cols-12 gap-4 ${isFullscreen ? 'h-[calc(100vh-100px)]' : 'min-h-[580px]'}`}>
         
         {/* Left: Code Editor (5 cols) */}
-        <div className={`lg:col-span-5 flex flex-col linear-card rounded-2xl border-white/[0.12] rounded-[20px] overflow-hidden shadow-lg ${
+        <div className={`lg:col-span-5 flex flex-col prism-card rounded-3xl border-white/10 rounded-2xl overflow-hidden shadow-lg ${
           activeTab === 'preview' ? 'hidden lg:flex' : 'flex'
         }`}>
-          <div className="bg-[#0a0c14] px-4 py-2.5 border-b border-white/[0.12] flex items-center justify-between text-xs">
+          <div className="bg-[#090b14]/90 px-4 py-2.5 border-b border-white/10 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2 text-slate-300 font-mono">
               <FileCode className="w-3.5 h-3.5 text-indigo-400" />
               <span>index.html (실시간 코드 수정 가능)</span>
@@ -197,17 +197,17 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
           <textarea
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            className="flex-1 w-full bg-[#0a0c14] text-slate-200 p-4 font-mono text-xs leading-relaxed resize-none focus:outline-none focus:ring-1 focus:ring-indigo-500/50 selection:bg-indigo-500/30 overflow-y-auto"
+            className="flex-1 w-full bg-[#090b14]/90 text-slate-200 p-4 font-mono text-xs leading-relaxed resize-none focus:outline-none focus:ring-1 focus:ring-indigo-500/50 selection:bg-indigo-500/30 overflow-y-auto"
             placeholder="AI가 생성한 전체 HTML 코드를 여기에 붙여넣으면 즉시 우측에 렌더링됩니다..."
             spellCheck={false}
           />
         </div>
 
         {/* Right: Live Preview Frame (7 cols) */}
-        <div className={`lg:col-span-7 flex flex-col linear-card rounded-2xl border-white/[0.12] rounded-[20px] overflow-hidden shadow-lg ${
+        <div className={`lg:col-span-7 flex flex-col prism-card rounded-3xl border-white/10 rounded-2xl overflow-hidden shadow-lg ${
           activeTab === 'code' ? 'hidden lg:flex' : 'flex'
         }`}>
-          <div className="bg-[#0a0c14] px-4 py-2.5 border-b border-white/[0.12] flex items-center justify-between text-xs">
+          <div className="bg-[#090b14]/90 px-4 py-2.5 border-b border-white/10 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2 text-slate-300">
               <Eye className="w-3.5 h-3.5 text-emerald-400" />
               <span className="font-semibold">브라우저 실행 화면</span>
@@ -229,9 +229,9 @@ export const VibePlayground: React.FC<VibePlaygroundProps> = ({
           </div>
 
           {/* Iframe Viewport Container */}
-          <div className="flex-1 bg-[#0a0c14] flex items-center justify-center p-2 sm:p-4 overflow-auto">
+          <div className="flex-1 bg-[#090b14]/90 flex items-center justify-center p-2 sm:p-4 overflow-auto">
             <div
-              className={`h-full transition-all duration-300 rounded-xl overflow-hidden border border-white/[0.12] shadow-2xl bg-white ${
+              className={`h-full transition-all duration-300 rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-white ${
                 viewDevice === 'desktop'
                   ? 'w-full'
                   : viewDevice === 'tablet'

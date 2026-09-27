@@ -28,7 +28,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-[24px] border border-emerald-900/40 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
+      <div className="rounded-3xl border border-emerald-900/40 bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
         <div className="space-y-2 max-w-3xl">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-bold">
             <Rocket className="w-3.5 h-3.5 text-emerald-400" />
@@ -52,10 +52,10 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
             <div
               key={guide.id}
               onClick={() => setSelectedGuide(guide)}
-              className={`cursor-pointer rounded-[24px] border p-5 transition-all duration-200 flex flex-col justify-between space-y-3 ${
+              className={`cursor-pointer rounded-3xl border p-5 transition-all duration-200 flex flex-col justify-between space-y-3 ${
                 isSelected
                   ? 'bg-slate-900/90 border-emerald-400 shadow-lg shadow-emerald-500/10 ring-1 ring-emerald-400/50'
-                  : 'bg-slate-900/50 border-white/[0.12] hover:border-slate-700 hover:bg-slate-900/80'
+                  : 'bg-slate-900/50 border-white/10 hover:border-slate-700 hover:bg-slate-900/80'
               }`}
             >
               <div className="space-y-2">
@@ -77,7 +77,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-white/[0.12] flex items-center justify-between text-xs text-emerald-400 font-semibold">
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-emerald-400 font-semibold">
                 <span>단계별 배포 로드맵 열기</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -87,9 +87,9 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
       </div>
 
       {/* Step by Step Visual Card */}
-      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="prism-card rounded-3xl border-white/10 rounded-2xl p-6 shadow-xl space-y-6">
         
-        <div className="border-b border-white/[0.12] pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="border-b border-white/10 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h3 className="text-lg font-bold text-white flex items-center gap-2">
               <Globe className="w-5 h-5 text-emerald-400" />
@@ -114,7 +114,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
         </div>
 
         {/* Instructor Script Box */}
-        <div className="bg-[#0a0c14]/80 border border-emerald-500/20 rounded-xl p-4 text-xs space-y-1">
+        <div className="bg-[#090b14]/90/80 border border-emerald-500/20 rounded-xl p-4 text-xs space-y-1">
           <p className="font-bold text-emerald-300 flex items-center gap-1.5">
             <Share2 className="w-3.5 h-3.5 text-emerald-400" />
             <span>수업 현장 강사님 멘트 가이드:</span>
@@ -127,7 +127,7 @@ export const VibeDeployGuide: React.FC<VibeDeployGuideProps> = ({
         {/* Step Flow List */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {selectedGuide.steps.map((st) => (
-            <div key={st.stepNum} className="p-4 rounded-xl bg-[#07080f]/90 border border-white/[0.12] space-y-2">
+            <div key={st.stepNum} className="p-4 rounded-xl bg-[#090b14]/90 border border-white/10 space-y-2">
               <div className="flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold flex items-center justify-center font-mono">
                   {st.stepNum}

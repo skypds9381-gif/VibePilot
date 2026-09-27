@@ -38,14 +38,14 @@ export const VibeApp: React.FC<VibeAppProps> = ({ onSwitchToCinema }) => {
   };
 
   return (
-    <div className={`min-h-screen linear-canvas text-slate-100 flex flex-col font-sans transition-all relative overflow-x-hidden selection:bg-cyan-500 selection:text-black antialiased ${
+    <div className={`min-h-screen aurora-bg text-slate-100 flex flex-col font-sans transition-all relative overflow-x-hidden selection:bg-indigo-500 selection:text-white ${
       isProjectorMode ? 'contrast-125' : ''
     }`}>
-      {/* High-Tech Cyber Laser Beams */}
+      {/* Aurora Ambient Background Orbs */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute top-0 left-1/3 w-[600px] h-[300px] bg-indigo-500/10 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute top-1/2 right-10 w-[450px] h-[350px] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none" />
-        <div className="absolute bottom-10 left-10 w-[500px] h-[300px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute -top-40 left-1/4 w-[500px] h-[500px] bg-indigo-600/15 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute top-1/3 -right-20 w-[450px] h-[450px] bg-pink-600/12 rounded-full blur-[140px]" />
+        <div className="absolute -bottom-20 left-10 w-[550px] h-[550px] bg-cyan-600/15 rounded-full blur-[130px]" />
       </div>
       {/* Vibe Studio Navigation Bar (Refactored Zero-Scroll Cluster) */}
       <VibeHeader

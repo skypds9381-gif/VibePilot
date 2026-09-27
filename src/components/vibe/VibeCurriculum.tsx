@@ -36,7 +36,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Banner */}
-      <div className="rounded-[24px] border border-purple-900/40 bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
+      <div className="rounded-3xl border border-purple-900/40 bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
         <div className="space-y-2 max-w-2xl">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-mono font-bold">
             <Award className="w-3.5 h-3.5 text-purple-400" />
@@ -60,10 +60,10 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
             <div
               key={challenge.id}
               onClick={() => setSelectedChallenge(challenge)}
-              className={`cursor-pointer rounded-[24px] border p-4 transition-all duration-200 flex flex-col justify-between space-y-3 ${
+              className={`cursor-pointer rounded-3xl border p-4 transition-all duration-200 flex flex-col justify-between space-y-3 ${
                 isSelected
                   ? 'bg-slate-900/90 border-purple-500 shadow-lg shadow-purple-500/10 ring-1 ring-purple-500/50'
-                  : 'bg-slate-900/50 border-white/[0.12] hover:border-slate-700 hover:bg-slate-900/80'
+                  : 'bg-slate-900/50 border-white/10 hover:border-slate-700 hover:bg-slate-900/80'
               }`}
             >
               <div className="space-y-2">
@@ -86,7 +86,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
                 </p>
               </div>
 
-              <div className="flex items-center justify-between pt-2 border-t border-white/[0.12] text-xs font-medium">
+              <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs font-medium">
                 <span className="text-slate-500 font-mono">{challenge.category}</span>
                 <span className="text-purple-400 flex items-center gap-1">
                   <span>상세 보기</span>
@@ -99,10 +99,10 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
       </div>
 
       {/* Selected Challenge Detail Card */}
-      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="prism-card rounded-3xl border-white/10 rounded-2xl p-6 shadow-xl space-y-6">
         
         {/* Header of Detail */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-950 border border-purple-500/40 text-purple-300">
@@ -132,7 +132,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
         </div>
 
         {/* Instructor Note Card */}
-        <div className="bg-[#0a0c14]/80 rounded-xl p-4 border border-purple-500/20 flex items-start gap-3 text-xs">
+        <div className="bg-[#090b14]/90/80 rounded-xl p-4 border border-purple-500/20 flex items-start gap-3 text-xs">
           <Lightbulb className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
           <div className="space-y-1">
             <p className="font-bold text-white">🎓 강사용 지도 가이드 (Teaching Point):</p>
@@ -144,7 +144,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
 
         {/* Requirements Breakdown */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-          <div className="space-y-2 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12]">
+          <div className="space-y-2 bg-[#090b14]/90 p-4 rounded-xl border border-white/10">
             <p className="font-bold text-white flex items-center gap-1.5">
               <Layers className="w-3.5 h-3.5 text-indigo-400" />
               <span>핵심 구현 스펙</span>
@@ -156,7 +156,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
             </ul>
           </div>
 
-          <div className="space-y-2 bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12]">
+          <div className="space-y-2 bg-[#090b14]/90 p-4 rounded-xl border border-white/10">
             <p className="font-bold text-white flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-pink-400" />
               <span>디자인 & 기술 조건</span>
@@ -175,7 +175,7 @@ export const VibeCurriculum: React.FC<VibeCurriculumProps> = ({
             <span className="text-xs font-bold text-slate-300">수강생에게 제공할 AI 프롬프트 전문</span>
             <span className="text-[11px] text-slate-500 font-mono">One-Shot Prompt</span>
           </div>
-          <div className="bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
+          <div className="bg-[#090b14]/90 p-4 rounded-xl border border-white/10 font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
             {selectedChallenge.quickPrompt}
           </div>
         </div>

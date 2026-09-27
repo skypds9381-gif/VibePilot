@@ -35,7 +35,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
     <div className={`space-y-6 ${isProjectorMode ? 'text-base' : 'text-sm'}`}>
       
       {/* Intro Banner */}
-      <div className="rounded-[24px] border border-pink-900/40 bg-gradient-to-br from-pink-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
+      <div className="rounded-3xl border border-pink-900/40 bg-gradient-to-br from-pink-950/40 via-slate-900 to-slate-950 p-5 sm:p-6 shadow-xl">
         <div className="space-y-2 max-w-3xl">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-mono font-bold">
             <Gamepad2 className="w-3.5 h-3.5 text-pink-400" />
@@ -59,10 +59,10 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
             <div
               key={game.id}
               onClick={() => setSelectedGame(game)}
-              className={`cursor-pointer rounded-[24px] border p-5 transition-all duration-200 flex flex-col justify-between space-y-3 ${
+              className={`cursor-pointer rounded-3xl border p-5 transition-all duration-200 flex flex-col justify-between space-y-3 ${
                 isSelected
                   ? 'bg-slate-900/90 border-pink-400 shadow-lg shadow-pink-500/10 ring-1 ring-pink-400/50'
-                  : 'bg-slate-900/50 border-white/[0.12] hover:border-slate-700 hover:bg-slate-900/80'
+                  : 'bg-slate-900/50 border-white/10 hover:border-slate-700 hover:bg-slate-900/80'
               }`}
             >
               <div className="space-y-2">
@@ -84,7 +84,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-white/[0.12] flex items-center justify-between text-xs text-pink-400 font-semibold">
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-pink-400 font-semibold">
                 <span>게임 제작 명세 & 프롬프트</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -94,9 +94,9 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
       </div>
 
       {/* Selected Game Details */}
-      <div className="linear-card rounded-2xl border-white/[0.12] rounded-[20px] p-6 shadow-xl space-y-6">
+      <div className="prism-card rounded-3xl border-white/10 rounded-2xl p-6 shadow-xl space-y-6">
         
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/[0.12] pb-5">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-5">
           <div className="space-y-1">
             <span className="text-xs font-bold text-pink-400 font-mono">
               [오늘의 실습 미니게임]
@@ -129,7 +129,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
         </div>
 
         {/* Teaching Guide */}
-        <div className="bg-[#0a0c14]/80 rounded-xl p-4 border border-pink-500/20 text-xs space-y-1">
+        <div className="bg-[#090b14]/90/80 rounded-xl p-4 border border-pink-500/20 text-xs space-y-1">
           <p className="font-bold text-pink-300 flex items-center gap-1.5">
             <Flame className="w-4 h-4 text-pink-400" />
             <span>수업 활용 과제 아이디어:</span>
@@ -148,7 +148,7 @@ export const VibeGamesStudio: React.FC<VibeGamesStudioProps> = ({
               AI에게 던져줄 게임 생성 원본 프롬프트
             </span>
           </div>
-          <div className="bg-[#0a0c14] p-4 rounded-xl border border-white/[0.12] font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
+          <div className="bg-[#090b14]/90 p-4 rounded-xl border border-white/10 font-mono text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
             {selectedGame.prompt}
           </div>
         </div>
