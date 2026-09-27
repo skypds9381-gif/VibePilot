@@ -36,6 +36,19 @@ interface BoxOfficeLiveProps {
   onSelectDetail: (movie: MovieItem) => void;
 }
 
+// Helper to format audience count cleanly (preventing 2-line wraps on mobile)
+function formatAudienceCount(num: number, isShort = false): string {
+  if (isShort && num >= 10000) {
+    const man = Math.floor(num / 10000);
+    const rest = Math.floor((num % 10000) / 1000);
+    if (man >= 1000) {
+      return `${(num / 10000).toFixed(0)}만`;
+    }
+    return rest > 0 ? `${man}.${rest}만` : `${man}만`;
+  }
+  return num.toLocaleString();
+}
+
 export const BoxOfficeLive: React.FC<BoxOfficeLiveProps> = ({
   onOpenTicket,
   onSelectDetail
@@ -495,32 +508,38 @@ export const BoxOfficeLive: React.FC<BoxOfficeLiveProps> = ({
                 </div>
 
                 {/* Right: Box Office Key Numbers & Direct Action */}
-                <div className="w-full md:w-auto flex items-center justify-between md:justify-end gap-5 pt-3 md:pt-0 border-t border-stone-800/80 md:border-none">
-                  <div className="flex items-center gap-4 sm:gap-6 text-right font-mono">
-                    <div>
-                      <p className="text-[10px] text-stone-500 uppercase tracking-wider">일일 관객</p>
-                      <p className="text-sm sm:text-base font-bold text-amber-400">
-                        {movie.audiCnt.toLocaleString()}명
+                <div className="w-full md:w-auto flex flex-col sm:flex-row items-stretch sm:items-center justify-between md:justify-end gap-3 sm:gap-5 pt-3 md:pt-0 border-t border-stone-800/80 md:border-none">
+                  <div className="flex items-center justify-around sm:justify-end gap-3 sm:gap-6 text-center sm:text-right font-mono bg-stone-950/40 sm:bg-transparent py-1.5 px-2 rounded-xl sm:p-0 border border-stone-800/40 sm:border-none">
+                    <div className="min-w-0">
+                      <p className="text-[10px] text-stone-400 uppercase tracking-wider whitespace-nowrap">일일 관객</p>
+                      <p className="text-xs sm:text-sm md:text-base font-bold text-amber-400 whitespace-nowrap">
+                        <span className="hidden xs:inline">{movie.audiCnt.toLocaleString()}명</span>
+                        <span className="xs:hidden">{formatAudienceCount(movie.audiCnt, true)}명</span>
                       </p>
                     </div>
 
-                    <div>
-                      <p className="text-[10px] text-stone-500 uppercase tracking-wider">누적 관객</p>
-                      <p className="text-sm sm:text-base font-bold text-stone-200">
-                        {movie.audiAcc.toLocaleString()}명
+                    <div className="w-px h-6 bg-stone-800 sm:hidden" />
+
+                    <div className="min-w-0">
+                      <p className="text-[10px] text-stone-400 uppercase tracking-wider whitespace-nowrap">누적 관객</p>
+                      <p className="text-xs sm:text-sm md:text-base font-bold text-stone-100 whitespace-nowrap">
+                        <span className="hidden xs:inline">{movie.audiAcc.toLocaleString()}명</span>
+                        <span className="xs:hidden">{formatAudienceCount(movie.audiAcc, true)}명</span>
                       </p>
                     </div>
 
-                    <div className="hidden sm:block">
-                      <p className="text-[10px] text-stone-500 uppercase tracking-wider">예매율</p>
-                      <p className="text-sm sm:text-base font-bold text-red-400">
+                    <div className="w-px h-6 bg-stone-800 sm:hidden" />
+
+                    <div className="min-w-0">
+                      <p className="text-[10px] text-stone-400 uppercase tracking-wider whitespace-nowrap">예매율</p>
+                      <p className="text-xs sm:text-sm md:text-base font-bold text-red-400 whitespace-nowrap">
                         {movie.bookingRate}%
                       </p>
                     </div>
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-end gap-2 shrink-0">
                     <button
                       onClick={() => setSelectedTheaterMovie(movie)}
                       className="px-3 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold rounded-lg border border-stone-700 transition-colors flex items-center gap-1.5 whitespace-nowrap"
